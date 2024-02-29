@@ -1,8 +1,10 @@
 import Navbar from "@/components/navbar/Navbar";
 import Card from "@/components/card/Card";
 import Tarjeta from "@/components/empresas/Descripcion";
+import Beneficios from "@/components/beneficios/Beneficios";
 
 export default function Home() {
+
   return (
     <>
       <Navbar />
@@ -50,6 +52,12 @@ export default function Home() {
       
       <div className=" m-10">
       <Tarjeta />
+      </div>
+      <div> 
+        {
+             <Beneficios/>
+        }
+     
       </div>
     </>
   );
