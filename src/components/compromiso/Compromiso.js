@@ -52,7 +52,7 @@ const Compromiso = () => {
         </ul>
         <div className="px-6 pt-4 pb-2">
         <button className="bg-red-700 hover:bg-blue-900 text-white font-bold mt-6 py-2 px-4 rounded">
-          Conoce nuestra historia
+          Conoce nuestra historia!
         </button>
       </div>
       </section>
