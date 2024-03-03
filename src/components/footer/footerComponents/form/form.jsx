@@ -5,6 +5,7 @@ import {
   fieldsetContainer,
   buttonStyle,
 } from "./formStyles";
+
 export default function Form() {
   return (
     <div className="mx-12 my-2 flex justify-center  ">
@@ -19,7 +20,7 @@ export default function Form() {
         </legend>
         <form
           action="#URL donde van los datos"
-          method="#Metodo HTTP para enviar"
+          method="#Método HTTP para enviar(GET//POST, siendo POST mas seguro)"
         >
           <div
             id="dataContainer"

@@ -1,13 +1,14 @@
 import React from "react";
 import { FaCcVisa, FaCcMastercard, FaBitcoin } from "react-icons/fa";
 import { SiMercadopago, SiAmericanexpress } from "react-icons/si";
+
 export default function MediosDePago() {
   return (
     <div
-      id="redesSociales-enlaces"
-      className="my-4 flex w-96 justify-around pb-4"
+      id="redesSociales-mediosPagos"
+      className="my-4 flex w-full justify-evenly pb-4"
     >
-      <div id="redesSociales" className="flex w-20  flex-col gap-2">
+      <div id="redesSociales" className="flex w-20 flex-col gap-2 lg:mx-16">
         <h3>
           <b>MEDIOS DE PAGO</b>
         </h3>
@@ -39,7 +40,7 @@ export default function MediosDePago() {
           </a>
         </ul>
       </div>
-      <div id="enlaces" className="flex w-20 flex-col gap-2">
+      <div id="enlaces" className="flex w-36 flex-col gap-2 lg:mx-16">
         <h3>
           <b>ENLACES</b>
         </h3>

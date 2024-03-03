@@ -5,16 +5,17 @@ import {
   FaInstagramSquare,
   FaYoutube,
   FaLinkedin,
-} from "react-icons/fa"; //npm install react-icons
-//Acerca de por Nosotros
+} from "react-icons/fa";
+//npm install react-icons
+//"Acerca de" "por Nosotros"
 
 export default function Contact() {
   return (
     <div
       id="redesSociales-enlaces"
-      className=" my-4 flex w-96 justify-around pb-4"
+      className=" mx-16 my-4 flex w-full justify-evenly pb-4"
     >
-      <div id="redesSociales" className="flex w-20  flex-col gap-2">
+      <div id="redesSociales" className="flex w-20  flex-col gap-2 lg:mx-16">
         <h3>
           <b>SÍGUENOS</b>
         </h3>
@@ -46,7 +47,7 @@ export default function Contact() {
           </a>
         </ul>
       </div>
-      <div id="datosContacto" className="flex w-20 flex-col gap-2">
+      <div id="datosContacto" className="flex w-36 flex-col gap-2  lg:mx-16">
         <h3>
           <b>Datos de Contacto</b>
         </h3>
