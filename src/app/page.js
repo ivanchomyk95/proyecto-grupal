@@ -1,5 +1,6 @@
 import Footer from "@/components/footer/footer";
 import Head from "next/head";
+//npm install react-icons
 
 export default function Home() {
   return (
