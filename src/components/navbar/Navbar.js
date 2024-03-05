@@ -12,7 +12,7 @@ function Navbar() {
     <nav className="bg-[#2b2a4c] text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         <a href="/" className="flex items-center">
-          <img src="imgs/image.png" alt="Logo" className=" rounded-xl h-20 ml-2" />
+          <img src="imgs/logo.png" alt="Logo" className=" rounded-xl h-20 ml-2" />
         </a>
         <ul className="flex space-x-4">
           <li className="relative">
