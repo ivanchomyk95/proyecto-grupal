@@ -69,5 +69,6 @@ export default function Home() {
         <Compromiso />
       </div>
     </>
+
   );
 }
