@@ -1,7 +1,8 @@
 const { Button } = require("bootstrap")
 
 
-const Cartitem = () => {
+const Cartitem = ({item}) => {
+    const {nombre, precio, id} = item;
     return (
         <div className="cart-item">
             <h4>Nombre</h4>
@@ -10,6 +11,6 @@ const Cartitem = () => {
             <Button>Eliminar todos</Button>
         </div>
     );
-}
+};
 
 export default Cartitem;
