@@ -1,5 +1,6 @@
 import React from "react";
 import { providers } from "../../../../../public/dataSet/providers";
+import { anchorStyle, summaryStyle } from "./providerStyles";
 
 export default function Providers() {
   const providersCards = providers.map((provider, indice) => {
@@ -8,11 +9,7 @@ export default function Providers() {
         className="mx-12 flex w-28 flex-col items-center "
         key={provider.name}
       >
-        <a
-          target="_blank"
-          href={provider.href}
-          className="mb-2  flex flex-col items-center rounded-sm p-1 shadow-sm shadow-slate-400  duration-200 hover:scale-110 hover:shadow-md hover:shadow-slate-950"
-        >
+        <a target="_blank" href={provider.href} className={anchorStyle}>
           <img
             src={provider.img}
             alt={provider.name}
@@ -21,7 +18,7 @@ export default function Providers() {
         </a>
         <figcaption className="text-center">
           <details className="rounded-md p-1 ring-inherit open:w-64 open:bg-slate-100 open:ring-2">
-            <summary className="[appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
+            <summary className={summaryStyle}>
               <h3 className="cursor-pointer ">
                 <b>{provider.name}</b>
               </h3>

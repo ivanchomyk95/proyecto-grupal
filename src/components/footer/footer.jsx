@@ -4,18 +4,19 @@ import Contact from "./footerComponents/contact/contact";
 import Form from "./footerComponents/form/form";
 import MediosDePago from "./footerComponents/mediosDePago/mediosDePago";
 import WhatsApp from "./footerComponents/whatsApp/whatsApp";
+
 export default function Footer() {
   return (
     <footer className=" min-w-full">
       <Providers />
-      <div className="lg:flex  lg:justify-around">
+      <div id="formAndAside" className="lg:flex  lg:justify-around">
         <Form />
-        <div className="flex flex-col items-center justify-center">
+        <div id="aside" className="flex flex-col items-center justify-center">
           <Contact />
           <MediosDePago />
         </div>
       </div>
-      <div className=" text-right text-sm">
+      <div className="text-right text-sm">
         <img
           src="imgs/image.png"
           alt="Logo"
