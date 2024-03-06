@@ -6,9 +6,9 @@ import MediosDePago from "./footerComponents/mediosDePago/mediosDePago";
 import WhatsApp from "./footerComponents/whatsApp/whatsApp";
 export default function Footer() {
   return (
-    <footer className=" relative min-w-full">
+    <footer className=" min-w-full">
       <Providers />
-      <div className="lg:flex lg:justify-around">
+      <div className="lg:flex  lg:justify-around">
         <Form />
         <div className="flex flex-col items-center justify-center">
           <Contact />
