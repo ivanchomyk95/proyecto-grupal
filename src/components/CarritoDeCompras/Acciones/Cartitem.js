@@ -1,14 +1,16 @@
 const { Button } = require("bootstrap")
 
 
-const Cartitem = ({item}) => {
-    const {nombre, precio, id} = item;
+const Cartitem = ({item, deleteFromCart}) => {
+
+    const {name, price, id, quantity} = item;
+
     return (
         <div className="cart-item">
-            <h4>Nombre</h4>
-            <h5>Precio</h5>
-            <Button>Eliminar uno</Button>
-            <Button>Eliminar todos</Button>
+            <h4>{name} </h4>
+            <h5>$ {price} x {quantity} = {price * quantity}</h5>
+            <Button onClick={() => deleteFromCart (id)}>Eliminar uno</Button>
+            <Button onClick={() => deleteFromCart (id, true)}>Eliminar todos</Button>
         </div>
     );
 };

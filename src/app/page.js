@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar/Navbar";
 import Card from "@/components/card/Card";
 import Tarjeta from "@/components/empresas/Descripcion";
+import ShoppingCart from "@/components/CarritoDeCompras/Acciones/ShoppingCart";
 
 export default function Home() {
   return (
@@ -51,6 +52,7 @@ export default function Home() {
       <div className=" m-10">
       <Tarjeta />
       </div>
+      <ShoppingCart/>
     </>
   );
 }

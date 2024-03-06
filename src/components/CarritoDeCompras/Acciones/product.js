@@ -6,9 +6,9 @@ const Productos = ({Productos}) => {
 
     return (
         <div className="producto">
-            <h4>Nombre</h4>
-            <h5>Precio</h5>
-            <button onClick={agregarAlCarrito}>Comprar</button> 
+            <h4>{Nombre} </h4>
+            <h5>$ {Precio} </h5>
+            <button onClick={agregarAlCarrito(id)}>Comprar</button> 
         </div>
     );
 }

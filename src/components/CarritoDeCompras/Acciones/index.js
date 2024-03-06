@@ -1,6 +1,6 @@
 
 import Head from "next/head";
-import CarritoDeCompras from "./CarritoDeCompras";
+import ShoppingCart from "./ShoppingCart";
 
 
 
@@ -9,7 +9,7 @@ export default function Home () {
         <>
         <Head></Head>
         <main>
-            <CarritoDeCompras/>
+            <ShoppingCart/>
         </main>
         </>
     );    
