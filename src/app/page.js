@@ -88,7 +88,7 @@ import Card from "@/components/card/Card";
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen">
+    <div className="h-screen w-full">
       <Beneficios />
       <Card />
       <Footer />

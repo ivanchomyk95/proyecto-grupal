@@ -19,9 +19,9 @@ export default function Footer() {
         <img
           src="imgs/image.png"
           alt="Logo"
-          className="mx-auto  my-3 w-24  rounded-md"
+          className="mx-auto  my-3 w-24  rounded-md "
         />
-        <small className="bottom-0 pr-4 ">
+        <small className="bottom-0 pr-4">
           Copyright © 2023 ProyectoNumenDevs. All Rights Reserved.
         </small>
       </div>
