@@ -4,7 +4,10 @@ import { providers } from "../../../../../public/dataSet/providers";
 export default function Providers() {
   const providersCards = providers.map((provider, indice) => {
     return (
-      <figure className="mx-12 flex w-28 flex-col items-center " key={indice}>
+      <figure
+        className="mx-12 flex w-28 flex-col items-center "
+        key={provider.name}
+      >
         <a
           target="_blank"
           href={provider.href}
