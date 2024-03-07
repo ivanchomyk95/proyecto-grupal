@@ -3,10 +3,10 @@ import Boton from '../button/Button';
 
 const Oferta = () => {
   return (
-    <div className="relative">
+    <div className="relative p-4">
       <div className="absolute inset-0 bg-[#468B97] opacity-40" />
       <div
-        className="w-full h-[20rem] mb-8 bg-repeat flex flex-col justify-center items-center"
+        className="w-full h-[25rem] bg-repeat flex flex-col justify-center items-center"
         style={{
           backgroundImage: "url('/imgs/bgRepeat.png')",
           backgroundSize: 'auto 100%',
