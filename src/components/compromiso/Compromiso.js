@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
+import Boton from "../button/Button";
 
 const Compromiso = () => {
   const infoValores = [
@@ -27,23 +28,24 @@ const Compromiso = () => {
   ];
 
   return (
-    <section className="flex flex-row pt-5 ml-6">
-      <section className="flex flex-col">
-        <h2 className=" mb-8 text-center mt-2">Tu pasión, nuestro compromiso</h2>
-        <h4>
+    <section className="flex flex-col lg:flex-row pt-5 mx-6 lg:ml-6">
+      <div className="flex flex-col lg:w-1/2">
+        <h2 className="mb-8 text-center mt-2">Tu pasión, nuestro compromiso</h2>
+        <p>
           Ofrecemos una experiencia de compra cómoda, segura y personalizada a
           los jugadores de todo el mundo, brindándoles acceso a una amplia
           selección de videojuegos digitales, DLCs, accesorios y contenido
-          gaming a precios competitivos. <br />
+          gaming a precios competitivos.
+          <br />
           Nuestros valores:
-        </h4>
+        </p>
         <ul>
           {infoValores.map((valor, index) => (
-            <li key={index} style={{ display: "flex", alignItems: "center" }}>
+            <li key={index} className="flex items-center">
               <div className="text-2xl">
                 <FaRegCircleCheck color="red" />
               </div>
-              <p style={{ marginLeft: "20px", marginTop: "20px" }}>
+              <p className="ml-3">
                 <strong>{valor.valores.split(":")[0]}:</strong>{" "}
                 {valor.valores.split(":")[1]}
               </p>
@@ -51,15 +53,12 @@ const Compromiso = () => {
           ))}
         </ul>
         <div className="px-6 pt-4 pb-2">
-        <button className="bg-red-700 hover:bg-blue-900 text-white font-bold mt-6 py-2 px-4 rounded">
-          Conoce nuestra historia
-        </button>
+          <Boton texto='Conoce nuestra historia' />
+        </div>
       </div>
-      </section>
-
-      <section className="w-full m-6">
-        <img src="\imgs\imgValores.png"></img>
-      </section>
+      <div className="w-full lg:w-1/2 m-6 lg:ml-0">
+        <img src="\imgs\imgValores.png" alt="Imagen de valores" className="w-full" />
+      </div>
     </section>
   );
 };
