@@ -6,7 +6,6 @@ import {
   FaYoutube,
   FaLinkedin,
 } from "react-icons/fa";
-//npm install react-icons
 //"Acerca de" "por Nosotros"
 
 export default function Contact() {

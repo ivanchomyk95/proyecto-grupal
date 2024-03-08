@@ -13,31 +13,21 @@ export default function MediosDePago() {
           <b>MEDIOS DE PAGO</b>
         </h3>
         <ul className=" flex  flex-wrap gap-3 text-2xl">
-          <a href="#">
-            <li>
-              <FaCcVisa />
-            </li>
-          </a>
-          <a href="#">
-            <li>
-              <FaCcMastercard />
-            </li>
-          </a>
-          <a href="#">
-            <li>
-              <SiMercadopago />
-            </li>
-          </a>
-          <a href="#">
-            <li>
-              <SiAmericanexpress />
-            </li>
-          </a>
-          <a href="#">
-            <li>
-              <FaBitcoin />
-            </li>
-          </a>
+          <li>
+            <FaCcVisa />
+          </li>
+          <li>
+            <FaCcMastercard />
+          </li>
+          <li>
+            <SiMercadopago />
+          </li>
+          <li>
+            <SiAmericanexpress />
+          </li>
+          <li>
+            <FaBitcoin />
+          </li>
         </ul>
       </div>
       <div id="enlaces" className="flex w-36 flex-col gap-2 lg:mx-16">
