@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCcVisa, FaCcMastercard, FaBitcoin } from "react-icons/fa";
 import { SiMercadopago, SiAmericanexpress } from "react-icons/si";
+import { liStyle } from "../contact/contactStyles";
 
 export default function MediosDePago() {
   return (
@@ -13,19 +14,19 @@ export default function MediosDePago() {
           <b>MEDIOS DE PAGO</b>
         </h3>
         <ul className=" flex  flex-wrap gap-3 text-2xl">
-          <li>
+          <li className={liStyle}>
             <FaCcVisa />
           </li>
-          <li>
+          <li className={liStyle}>
             <FaCcMastercard />
           </li>
-          <li>
+          <li className={liStyle}>
             <SiMercadopago />
           </li>
-          <li>
+          <li className={liStyle}>
             <SiAmericanexpress />
           </li>
-          <li>
+          <li className={liStyle}>
             <FaBitcoin />
           </li>
         </ul>
@@ -35,13 +36,13 @@ export default function MediosDePago() {
           <b>ENLACES</b>
         </h3>
         <ul className=" flex w-16  flex-wrap gap-3 text-xl">
-          <a href="#">
+          <a href="#" className="hover:font-extrabold">
             <li>Inicio</li>
           </a>
-          <a href="#">
+          <a href="#" className="hover:font-extrabold">
             <li>Nosotros</li>
           </a>
-          <a href="#">
+          <a href="#" className="hover:font-extrabold">
             <li>Servicios</li>
           </a>
         </ul>
