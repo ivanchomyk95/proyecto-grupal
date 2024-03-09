@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-family-title: "Montserrat", sans-serif;
+  --font-family-subtitle: "Montserrat", sans-serif;
+  --font-family-main: "Montserrat", sans-serif;
+
+  --font-size-title: 3rem;
+  --font-size-subtitle: 2.5rem;
+  --font-size-main: 16px;
+
+  --font-weight-title: 700;
+  --font-weight-subtitle: 500;
+  --font-weight-main: 400;
+
+  --color-primary: #b31312;
+  --color-dark: #2b2a4c;
+  --color-light: #eee2de;
+}
