@@ -8,7 +8,7 @@ import {
 
 export default function Form() {
   return (
-    <div className="mx-12 my-2 flex justify-center  ">
+    <div className="mx-12 my-2 flex justify-center   ">
       <fieldset className="border-4 border-double border-slate-600 p-4 ring-slate-200  ring-offset-4 hover:ring-4">
         <legend>
           <h3>
@@ -106,7 +106,7 @@ export default function Form() {
             </fieldset>
           </div>
           <fieldset className={fieldsetContainer}>
-            <details>
+            <details className="lg:min-h-24">
               <summary className="cursor-pointer">
                 Lea los términos y condiciones
               </summary>
