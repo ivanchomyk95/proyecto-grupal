@@ -15,28 +15,25 @@ function Navbar() {
           <img src="imgs/logo.png" alt="Logo" className="rounded-xl h-20 ml-2" />
         </a>
         <button className="md:hidden" onClick={toggleDropdown}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 inline-block ml-1">
-            {dropdownVisible ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            )}
-          </svg>
-        </button>
-        <ul className={`md:flex md:space-x-4 ${dropdownVisible ? 'flex flex-col w-full bg-red-700 border rounded-lg shadow-lg absolute top-16 md:relative' : 'hidden'} mt-4 md:mt-0`}>
-          <li className="relative md:relative">
-            <a href="/" className="hover:text-gray-300 transition-colors duration-200">Inicio</a>
-          </li>
-          <li>
-            <a href="/" className="hover:text-gray-500 transition-colors duration-200">Acerca de</a>
-          </li>
-          <li>
-            <a href="/" className="hover:text-gray-500 transition-colors duration-200">Servicios</a>
-          </li>
-          <li>
-            <a href="/" className="hover:text-gray-500 transition-colors duration-200">Contacto</a>
-          </li>
-        </ul>
+  <div className="w-6 h-px bg-white mb-1"></div>
+  <div className="w-6 h-px bg-white mb-1"></div>
+  <div className="w-6 h-px bg-white"></div>
+</button>
+<ul className={`md:flex md:space-x-4 ${dropdownVisible ? 'flex flex-col w-48 bg-red-700 border rounded-lg shadow-lg absolute top-14 md:relative left-1/2 transform -translate-x-1/2 justify-center items-center' : 'hidden'} mt-4 md:mt-0`}>  
+<li className="relative md:relative">
+    <a href="/" className="hover:text-gray-300 transition-colors duration-200">Inicio</a>
+  </li>
+  <li>
+    <a href="/" className="hover:text-gray-500 transition-colors duration-200">Acerca de</a>
+  </li>
+  <li>
+    <a href="/" className="hover:text-gray-500 transition-colors duration-200">Servicios</a>
+  </li>
+  <li>
+    <a href="/" className="hover:text-gray-500 transition-colors duration-200">Contacto</a>
+  </li>
+</ul>
+
      
       <div className="flex space-x-4 sm:space-x-2">
   <button className="hover:text-gray-300 transition-colors duration-200">
