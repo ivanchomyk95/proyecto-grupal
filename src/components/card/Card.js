@@ -1,5 +1,4 @@
 import React from 'react';
-import StyledButton from "@/components/button/Button";
 
 const Card = () => {
   return (
@@ -11,11 +10,9 @@ const Card = () => {
           <p className="text-gray-700 text-base">$200</p>
         </div>
         <div className="px-6 pt-4 pb-2">
-          {/* <button className="bg-red-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
+          <button className="bg-red-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
             Comprar
-          </button> */}
-          <StyledButton
-          text="Comprar"/>
+          </button>
 
         </div>
       </div>
