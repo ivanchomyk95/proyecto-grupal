@@ -65,8 +65,8 @@ const Beneficios = () => {
   return (
     <section className="bg-gray-100 min-h-[350px]">
       <div className="container mx-auto px-4 py-8">
-        <h2 className="mb-8 text-center">{profitTitle}</h2>
-        <div className="flex flex-wrap justify-between gap-2">
+        <h2 className="mb-8 text-center text-lg md:text-xl lg:text-2xl xl:text-3xl">{profitTitle}</h2>
+        <div className="flex flex-wrap justify-center lg:justify-between gap-2">
           {profitInfo.map(renderProfit)}
         </div>
       </div>
@@ -75,3 +75,4 @@ const Beneficios = () => {
 };
 
 export default Beneficios;
+
