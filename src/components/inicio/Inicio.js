@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { BsChevronCompactLeft , BsChevronCompactRight } from 'react-icons/bs';
 
+/*aa*/
 
 function Inicio() {
 
@@ -63,7 +64,7 @@ function Inicio() {
     }, [currentIndex]) */
 
     return(
-        <div className='max-w-[1400px] h-[780px] w-screen sm:w-full md:w-96 lg:w-1/3 xl:w-1/4'>
+        <div className=' h-[780px] w-screen '>
     <div style={{backgroundImage: `url(${slider[currentIndex].url})`, backgroundPosition: slider[currentIndex].backgroundPosition || 'center'}} className='w-full h-full bg-cover'>
       
       <div className='absolute top-[50%] -translate-x-0 translate-y-[50%] left-4 text-2xl rounded-full p-0.5 z-40 text-primary cursor-pointer'>

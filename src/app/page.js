@@ -14,12 +14,15 @@ import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/Navbar";
 import Card from "@/components/card/Card";
 import Beneficios from "@/components/beneficios/Beneficios";
+import Navbar2 from "@/components/navbar2/Navbar2";
+import Inicio from "@/components/inicio/Inicio";
 
 
 export default function Home() {
   return (
     <div className="h-screen w-full">
-      <Navbar />
+      <Navbar2 />
+      <Inicio />
       <Card />
       <Beneficios />
       <div className="p-8">
