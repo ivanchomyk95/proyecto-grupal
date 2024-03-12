@@ -7,6 +7,10 @@
  *Definir nombre/logo
  *Definir idioma
  */
+"use client"
+
+import Navbar from "@/components/navbar/Navbar";
+import Card from "@/components/card/Card";
 import Beneficios from "@/components/beneficios/Beneficios";
 import Footer from "@/components/footer/footer";
 import Card from "@/components/card/Card";
@@ -85,6 +89,11 @@ import Card from "@/components/card/Card";
 // }
 /////////////////::::::::::::::::::::::::::::::::
 //npm install react-icons
+import Compromiso from "@/components/compromiso/Compromiso";
+import StyledButton from "@/components/button/Button";
+import Footer from "@/components/footer/footer";
+
+//probando github
 
 export default function Home() {
   return (
