@@ -1,9 +1,8 @@
 import React from 'react';
-import StyledButton from "@/components/button/Button";
 
 const Card = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-10">
       <div className="bg-[#c5cacd57] max-w-sm rounded-3xl overflow-hidden shadow-xl mx-auto">
         <img src="imgs/the-witcher.jpg" alt="The Witcher" className="w-full h-auto" />
         <div className="px-6 py-4">
@@ -11,12 +10,9 @@ const Card = () => {
           <p className="text-gray-700 text-base">$200</p>
         </div>
         <div className="px-6 pt-4 pb-2">
-          {/* <button className="bg-red-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
+          <button className="bg-red-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
             Comprar
-          </button> */}
-          <StyledButton
-          text="Comprar"/>
-
+          </button>
         </div>
       </div>
 
