@@ -10,14 +10,10 @@
 
 import Compromiso from "@/components/compromiso/Compromiso";
 import Oferta from "@/components/oferta/Oferta";
-import ComicCon from "@/components/ComicCon/ComicCon";
-import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/Navbar";
 import Card from "@/components/card/Card";
 import Beneficios from "@/components/beneficios/Beneficios";
 import Footer from "@/components/footer/footer";
-import Compromiso from "@/components/compromiso/Compromiso";
-import Oferta from "../../proyecto-grupal/src/components/oferta/Oferta";
 import ComicCon from "@/components/ComicCon/ComicCon";
 
 export default function Home() {
