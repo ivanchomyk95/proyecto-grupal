@@ -23,8 +23,8 @@ export default function Home() {
       <Card />
       <Beneficios />
       <Compromiso />
-      <Oferta/>
-      <ComicCon/>
+      <Oferta />
+      <ComicCon />
       <Footer />
     </div>
   );

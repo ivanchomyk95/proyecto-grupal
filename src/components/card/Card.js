@@ -1,6 +1,5 @@
 import React from "react";
 import Boton from "../button/Button";
-import StyledButton from "@/components/button/Button";
 
 const Card = () => {
   return (
@@ -12,8 +11,8 @@ const Card = () => {
           <p className="text-base text-gray-700">$200</p>
         </div>
         <div className="px-6 pt-4 pb-2">
-        <Boton
-        texto="Comprar"/>
+          <Boton
+            texto="Comprar" />
         </div>
       </div>
 
@@ -28,8 +27,8 @@ const Card = () => {
           <p className="text-base text-gray-700">$300</p>
         </div>
         <div className="px-6 pt-4 pb-2">
-        <Boton
-        texto="Comprar"/>
+          <Boton
+            texto="Comprar" />
         </div>
       </div>
 
@@ -44,8 +43,8 @@ const Card = () => {
           <p className="text-base text-gray-700">$100</p>
         </div>
         <div className="px-6 pt-4 pb-2">
-        <Boton
-        texto="Comprar"/>
+          <Boton
+            texto="Comprar" />
         </div>
       </div>
 
@@ -60,8 +59,8 @@ const Card = () => {
           <p className="text-base text-gray-700">$200</p>
         </div>
         <div className="px-6 pt-4 pb-2">
-        <Boton
-        texto="Comprar"/>
+          <Boton
+            texto="Comprar" />
         </div>
       </div>
     </div>
