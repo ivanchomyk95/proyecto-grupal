@@ -6,41 +6,42 @@ import {
   FaYoutube,
   FaLinkedin,
 } from "react-icons/fa";
+import { liStyle } from "./contactStyles";
 //"Acerca de" "por Nosotros"
 
 export default function Contact() {
   return (
     <div
       id="redesSociales-enlaces"
-      className=" mx-16 my-4 flex w-full justify-evenly pb-4"
+      className=" mx-16 my-4 flex w-full justify-evenly pb-4 "
     >
       <div id="redesSociales" className="flex w-20  flex-col gap-2 lg:mx-16">
         <h3>
           <b>SÍGUENOS</b>
         </h3>
-        <ul className=" flex  flex-wrap gap-3 text-2xl">
+        <ul className=" flex flex-wrap  gap-3 text-2xl">
           <a href="#">
-            <li>
+            <li className={liStyle}>
               <FaInstagramSquare />
             </li>
           </a>
           <a href="#">
-            <li>
+            <li className={liStyle}>
               <FaTwitterSquare />
             </li>
           </a>
           <a href="#">
-            <li>
+            <li className={liStyle}>
               <FaFacebook />
             </li>
           </a>
           <a href="#">
-            <li>
+            <li className={liStyle}>
               <FaYoutube />
             </li>
           </a>
           <a href="#">
-            <li>
+            <li className={liStyle}>
               <FaLinkedin />
             </li>
           </a>

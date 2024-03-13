@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "connectarServer": "json-server --port 5000 --watch src/app/assets/db.json "
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -16,6 +17,7 @@
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
+    "react-router-dom": "^6.22.3",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
