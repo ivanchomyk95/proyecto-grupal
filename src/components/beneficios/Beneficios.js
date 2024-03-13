@@ -50,20 +50,18 @@ const Beneficios = () => {
 
   const renderProfit = (profit) => {
     return (
-      <div className="flex flex-col items-center justify-center max-w-[200px] p-4 m-4 bg-white rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105">
-        <div className="text-indigo-950 mb-4 h-[25%]">
-          {profit.pIcon}
-        </div>
-        <h4 className="text-xl text-center font-semibold mb-3 h-[20%]">
+      <div className="m-4 flex max-w-[200px] flex-col items-center justify-center rounded-lg bg-white p-4 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105">
+        <div className="mb-4 h-[25%] text-indigo-950">{profit.pIcon}</div>
+        <h4 className="mb-3 h-[20%] text-center text-xl font-semibold">
           {profit.pSubt}
         </h4>
-        <p className="text-sm text-gray-600 h-[55%]">{profit.pText}</p>
+        <p className="h-[55%] text-sm text-gray-600">{profit.pText}</p>
       </div>
     );
   };
 
   return (
-    <section className="bg-gray-100 min-h-[350px]">
+    <section className="min-h-[350px] bg-gray-100">
       <div className="container mx-auto px-4 py-8">
         <h2 className="mb-8 text-center">{profitTitle}</h2>
         <div className="flex flex-wrap justify-between gap-2">
