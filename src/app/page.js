@@ -13,6 +13,8 @@ import Card from "@/components/card/Card";
 import Beneficios from "@/components/beneficios/Beneficios";
 import Footer from "@/components/footer/footer";
 import Compromiso from "@/components/compromiso/Compromiso";
+import Oferta from "../../proyecto-grupal/src/components/oferta/Oferta";
+import ComicCon from "@/components/ComicCon/ComicCon";
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
       <Card />
       <Beneficios />
       <Compromiso />
+      <Oferta/>
+      <ComicCon/>
       <Footer />
     </div>
   );
