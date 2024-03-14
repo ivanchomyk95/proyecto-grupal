@@ -6,6 +6,8 @@ import Navbar from "@/components/navbar/Navbar";
 import Card from "@/components/card/Card";
 import Beneficios from "@/components/beneficios/Beneficios";
 import CardCarousel from "@/components/CarouselCards/Carousel";
+import ComicCon from "@/components/ComicCon/ComicCon";
+import Footer from "@/components/footer/footer";
 
 
 export default function Home() {
