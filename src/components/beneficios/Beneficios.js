@@ -50,7 +50,7 @@ const Beneficios = () => {
 
   const renderProfit = (profit) => {
     return (
-      <div className="flex flex-col items-center justify-center max-w-[200px] p-4 m-4 bg-white rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105">
+      <div className="conteiner flex flex-col items-center justify-center max-w-[200px] p-4 m-4 bg-white rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105">
         <div className="text-indigo-950 mb-4 h-[25%]">
           {profit.pIcon}
         </div>
