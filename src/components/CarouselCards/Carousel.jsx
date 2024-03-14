@@ -37,7 +37,7 @@ const CardCarousel = () => {
 
   return (
     <div className="carousel-container">
-      <Carousel className="flex flex-wrap justify-center gap-4 sm:flex-col sm:gap-0 md:flex-row md:flex-wrap md:justify-start" showArrows={true} showStatus={false} showThumbs={false} emulateTouch={true} infiniteLoop={true} centerMode={true} centerSlidePercentage={20}>
+      <Carousel className="flex flex-wrap gap-2 sm:flex-col sm:gap-0 md:flex-row md:flex-wrap md:justify-start" showArrows={true} showStatus={false} showThumbs={false} emulateTouch={true} centerMode={true} centerSlidePercentage={20}>
         {filteredCards.map((card) => (
           <div key={card.id} className="w-full sm:w-auto md:w-1/3 lg:w-1/4 xl:w-1/6">
             <Card card={card} />
