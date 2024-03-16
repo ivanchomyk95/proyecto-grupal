@@ -9,7 +9,6 @@ import CardCarousel from "@/components/CarouselCards/Carousel";
 import ComicCon from "@/components/ComicCon/ComicCon";
 import Footer from "@/components/footer/footer";
 
-
 export default function Home() {
   return (
     <div className="h-screen w-full ">
@@ -20,11 +19,12 @@ export default function Home() {
       <Oferta />
       <ComicCon />
       <div className="container mt-8 h-full">
-      <h2 className="text-center mb-6">Adquiere éstas ofertas a menos de $1000</h2>
-      <CardCarousel />
-    </div>
+        <h2 className="mb-6 text-center">
+          Adquiere éstas ofertas a menos de $1000
+        </h2>
+        <CardCarousel />
+      </div>
       <Footer />
-     
     </div>
   );
 }
