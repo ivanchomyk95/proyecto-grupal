@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-function Navbar() {
+function Navbar({ setIsVisible, isVisible }) {
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const toggleDropdown = () => {
@@ -19,32 +19,12 @@ function Navbar() {
           />
         </a>
         <button className="md:hidden" onClick={toggleDropdown}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="ml-1 inline-block h-6 w-6"
-          >
-            {dropdownVisible ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 15l7-7 7 7"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            )}
-          </svg>
+          <div className="mb-1 h-px w-6 bg-white"></div>
+          <div className="mb-1 h-px w-6 bg-white"></div>
+          <div className="h-px w-6 bg-white"></div>
         </button>
         <ul
-          className={`md:flex md:space-x-4 ${dropdownVisible ? "absolute top-16 flex w-full flex-col rounded-lg border bg-red-700 shadow-lg md:relative" : "hidden"} mt-4 md:mt-0`}
+          className={`md:flex md:space-x-4 ${dropdownVisible ? "absolute left-1/2 top-14 flex w-48 -translate-x-1/2 transform flex-col items-center justify-center rounded-lg border bg-red-700 shadow-lg md:relative" : "hidden"} mt-4 md:mt-0`}
         >
           <li className="relative md:relative">
             <a
@@ -97,7 +77,12 @@ function Navbar() {
               />
             </svg>
           </button>
-          <button className="transition-colors duration-200 hover:text-gray-300">
+          <button
+            className="transition-colors duration-200 hover:text-gray-300"
+            onClick={() => {
+              setIsVisible(!isVisible);
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

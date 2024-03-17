@@ -7,11 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "connectarServer": "json-server --port 5000 --watch src/app/assets/db.json "
+    "connectServer": "json-server --port 5000 --watch src/app/assets/db.json "
   },
   "dependencies": {
+    "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "icons": "^1.0.0",
+    "json-server": "^1.0.0-alpha.23",
     "next": "14.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
