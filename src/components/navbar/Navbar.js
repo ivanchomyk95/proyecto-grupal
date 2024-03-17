@@ -77,12 +77,7 @@ function Navbar({ setIsVisible, isVisible }) {
               />
             </svg>
           </button>
-          <button
-            className="transition-colors duration-200 hover:text-gray-300"
-            onClick={() => {
-              setIsVisible(!isVisible);
-            }}
-          >
+          <button className="transition-colors duration-200 hover:text-gray-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

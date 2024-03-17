@@ -26,7 +26,7 @@ export default function Providers() {
   );
   return (
     <div>
-      <h2 className="m-4 text-center">
+      <h2 className="mb-4 text-center">
         <b>PROVEEDORES</b>
       </h2>
       <div

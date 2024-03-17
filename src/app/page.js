@@ -1,16 +1,7 @@
 "use client";
-/*** Propuestas:
- *Modicar estructura de Card.De Ivan
- *Centrar tarjetas de beneficio ocultar/mostrar texto símil footer.
- *Elegir un navBar
- *Definir nombre/logo
- *Definir idioma
- */
 
 import Compromiso from "@/components/compromiso/Compromiso";
 import Oferta from "@/components/oferta/Oferta";
-import ComicCon from "@/components/ComicCon/ComicCon";
-import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/Navbar";
 import Card from "@/components/card/Card";
 import Beneficios from "@/components/beneficios/Beneficios";
@@ -24,11 +15,15 @@ export default function Home() {
       <Navbar setIsVisible={setIsVisible} isVisible={isVisible} />
       <Card />
       <Beneficios />
-      <div className="p-8">
-        <Compromiso />
-      </div>
+      <Compromiso />
       <Oferta />
       <ComicCon />
+      <div className="container mt-8 h-full">
+        <h2 className="mb-6 text-center">
+          Adquiere éstas ofertas a menos de $1000
+        </h2>
+        <CardCarousel />
+      </div>
       <Footer />
       {isVisible && (
         <ShoppingCart isVisible={isVisible} setIsVisible={setIsVisible} />
