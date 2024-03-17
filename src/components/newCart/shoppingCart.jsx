@@ -1,8 +1,8 @@
 import React, { useEffect, useReducer } from "react";
+import axios from "axios";
 import Products from "./cartComponents/Products/Products";
 import CartItems from "./cartComponents/CartItems/CartItems";
 import { shopInitialState } from "@/app/Reducer/ShopInitialState";
-import axios from "axios";
 import { TYPES } from "@/app/actions/TYPES";
 import { shopReducer } from "@/app/Reducer/shopReducer";
 
