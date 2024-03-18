@@ -1,5 +1,5 @@
 {
-  "shoppingInitialState": [
+  "products": [
     {
       "id": 1,
       "name": "Age of Empires II",
@@ -127,5 +127,30 @@
       "additionalImages": []
     }
   ],
-  "cart": []
+  "cartItems": [
+    {
+      "id": 1,
+      "name": "Age of Empires II",
+      "price": 400,
+      "imageSrc": "imgs/carrousel/Carruselimgs/AOEPortada.jpg",
+      "additionalImages": [
+        "/imgs/carrousel/AOE/ss_8f30a6ae45244f12ebdb48f99393aa9c93aaa398.1920x1080.jpg",
+        "/imgs/carrousel/AOE/ss_b42dec99b197fea9882abc333e2cfb0a77dd3ed2.1920x1080.jpg",
+        "/imgs/carrousel/AOE/ss_c13d14fd11f3deb2fa5f592cceb98db3d48ef10b.1920x1080.jpg",
+        "/imgs/carrousel/AOE/ss_f270aa4e146459dc8b75a69bfecf23d13b0e8df6.1920x1080.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Apex Legends",
+      "price": 300,
+      "imageSrc": "imgs/carrousel/Carruselimgs/apex-legends-header.jpg",
+      "additionalImages": [
+        "/imgs/carrousel/Apex-Legends/apex-legends-1.jpg",
+        "/imgs/carrousel/Apex-Legends/apex-legends-2.jpg",
+        "/imgs/carrousel/Apex-Legends/apex-legends-3.jpg",
+        "/imgs/carrousel/Apex-Legends/apex-legends-4.jpg"
+      ]
+    }
+  ]
 }

@@ -11,8 +11,8 @@ export default function ShoppingCart({ setIsVisible, isVisible }) {
 
   const updateState = async () => {
     const ENDPOINTS = {
-      products: "http://localhost:5000/productos",
-      cartItems: "http://localhost:5000/cart",
+      products: "http://localhost:5000/products",
+      cartItems: "http://localhost:5000/cartItems",
     };
 
     const responses = {
@@ -27,11 +27,10 @@ export default function ShoppingCart({ setIsVisible, isVisible }) {
 
     dispatch({ type: TYPES.READ_STATE, payload: data });
   };
-  console.log(state);
   useEffect(() => {
     updateState();
   }, []);
-
+  console.log(state);
   //shopping Modal Functions
   const handleClose = (e) => {
     if (e.target.id == "shopCart") {
@@ -46,9 +45,9 @@ export default function ShoppingCart({ setIsVisible, isVisible }) {
     >
       <div className=" mx-auto my-7 w-4/5  rounded-md bg-[--color-light] p-2 lg:absolute lg:right-2 lg:w-1/2  ">
         <h2 className="">TUS COMPRAS</h2>
-        <Products state={state} />
-        <CartItems />
-        <div className="">
+        {/* <Products state={state} /> */}
+        <CartItems state={state} />
+        <div className="mt-4">
           <button
             onClick={() => {
               setIsVisible(!isVisible);

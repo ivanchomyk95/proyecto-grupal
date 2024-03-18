@@ -7,6 +7,9 @@ import Card from "@/components/card/Card";
 import Beneficios from "@/components/beneficios/Beneficios";
 import ShoppingCart from "@/components/newCart/shoppingCart";
 import { useState } from "react";
+import ComicCon from "@/components/ComicCon/ComicCon";
+import CardCarousel from "@/components/CarouselCards/Carousel";
+import Footer from "@/components/footer/footer";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
