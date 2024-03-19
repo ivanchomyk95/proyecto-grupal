@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
+import { GrCart } from "react-icons/gr";
 import Link from 'next/link';
 import clsx from 'clsx';
 
@@ -31,17 +32,23 @@ function Navbar2() {
 
     return(
     <div>
-        <div className='absolute top-0 left-0 w-56 p-0 m-0 mt-[-22px]'>
+        <div className='absolute top-0 left-0 w-64 p-0 m-0 mt-[-30px]'>
             <img src='logo-2.svg'
              style={{ backgroundColor: 'transparent' }}
               alt="Logo Game" />      
         </div>
 
-        <div className='absolute top-6 left-80 w-96 p-0 m-0 text-white cursor-pointer'>
+        <div className='absolute top-6 left-80 p-0 m-0 text-white cursor-pointer xl:hidden'>
             <IoMenu size={25}
             onClick={() =>setMenu(true)}
             />
+            
         </div>
+
+        <div className='absolute top-6 left-[275px] text-white cursor-pointer'>
+        <GrCart size={25} />
+        </div>
+
 
         <div className={clsx(
             'fixed h-full w-screen lg:hidden bg-black/5 backdrop-blur-sm top-0 transform transition-all z-50',
