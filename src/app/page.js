@@ -13,6 +13,7 @@ import Footer from "@/components/footer/footer";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+
   return (
     <div className="h-screen w-full">
       <Navbar setIsVisible={setIsVisible} isVisible={isVisible} />

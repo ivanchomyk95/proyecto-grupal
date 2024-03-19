@@ -7,7 +7,7 @@ export default function CartItem({ cartItem }) {
       <div className="my-2 flex w-full justify-between px-2 font-semibold">
         <img className="h-10 w-10" src={cartItem.imageSrc} alt="" />
         <h3>{cartItem.name}</h3>
-        {cartItem.price}
+        <h3>$ {cartItem.price}</h3>
       </div>
       <button
         className="  font[--font-family-subtitle] rounded-md bg-[--color-primary] px-6 py-1 text-lg
