@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <Oferta />
       <ComicCon />
-      <CarouselApp />
+      <CarouselApp className="p-1" />
        <Footer />
      
     </div>
