@@ -5,7 +5,7 @@ import Oferta from "@/components/oferta/Oferta";
 import Navbar from "@/components/navbar/Navbar";
 import Card from "@/components/card/Card";
 import Beneficios from "@/components/beneficios/Beneficios";
-import CardCarousel from "@/components/CarouselCards/Carousel";
+import CarouselApp from "@/components/CarouselCards/CarouselApp";
 import ComicCon from "@/components/ComicCon/ComicCon";
 import Footer from "@/components/footer/footer";
 
@@ -19,11 +19,8 @@ export default function Home() {
       <Compromiso />
       <Oferta />
       <ComicCon />
-      <div className="container mt-8 h-full">
-      <h2 className="text-center mb-6">Adquiere éstas ofertas a menos de $1000</h2>
-      <CardCarousel />
-    </div>
-      <Footer />
+      <CarouselApp className="p-1" />
+       <Footer />
      
     </div>
   );
