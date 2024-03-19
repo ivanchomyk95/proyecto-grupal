@@ -11,6 +11,7 @@ import ComicCon from "@/components/ComicCon/ComicCon";
 import CarouselApp from "@/components/CarouselCards/CarouselApp";
 import Footer from "@/components/footer/footer";
 
+///SIGO HACIENDO CODIGO
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -22,7 +23,7 @@ export default function Home() {
       <Compromiso />
       <Oferta />
       <ComicCon />
-      <CarouselApp/>
+      <CarouselApp />
 
       <Footer />
       {isVisible && (
