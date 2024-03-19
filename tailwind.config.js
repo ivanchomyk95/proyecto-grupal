@@ -12,6 +12,9 @@ module.exports = {
           secondary: '#B31312'
       },
 
+      container: {
+        center: true,
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -21,3 +24,4 @@ module.exports = {
   },
   plugins: [],
 };
+

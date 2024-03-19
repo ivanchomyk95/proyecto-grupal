@@ -49,5 +49,50 @@
     font-size: var(--font-size-subtitle);
     font-weight: var(--font-weight-subtitle);
   }
+  .card {
+    background-color: #fff;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out; 
+    margin: 0 10px; 
+    min-width: 250px; 
+    max-width: 300px; 
+  }
   
- 
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .card-inner {
+    padding: 16px; 
+  }
+  
+  .card-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .carousel-container .carousel {
+    .w-full {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-400px * 5 - 0.5rem * 10));
+	}
+}
+
+.animate-scroll {
+	animation: scroll 13s linear infinite;
+}
+  

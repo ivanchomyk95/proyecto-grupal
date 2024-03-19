@@ -1,26 +1,30 @@
 import React from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import Boton from "../button/Button";
+import Boton from "../button/Button"; 
 
 const Compromiso = () => {
   const infoValores = [
     {
-      valores: `Pasión por los videojuegos: Creemos en el poder del entretenimiento que ofrecen los videojuegos y estamos comprometidos a brindar a los jugadores la mejor experiencia posible.`,
+      titulo: "Pasión por los videojuegos",
+      descripcion: "Creemos en el poder del entretenimiento que ofrecen los videojuegos y estamos comprometidos a brindar a los jugadores la mejor experiencia posible."
     },
     {
-      valores: `Confianza: Somos una empresa transparente y responsable que se preocupa por la seguridad y privacidad de nuestros clientes.`,
+      titulo: "Confianza",
+      descripcion: "Somos una empresa transparente y responsable que se preocupa por la seguridad y privacidad de nuestros clientes."
     },
     {
-      valores: `Innovación: Buscamos constantemente nuevas formas de mejorar la experiencia de compra y ofrecer a los jugadores los mejores productos y servicios.`,
+      titulo: "Innovación",
+      descripcion: "Buscamos constantemente nuevas formas de mejorar la experiencia de compra y ofrecer a los jugadores los mejores productos y servicios."
     },
     {
-      valores: `Excelencia: Nos esforzamos por ofrecer un servicio al cliente de alta calidad y superar las expectativas de nuestros clientes.`,
+      titulo: "Excelencia",
+      descripcion: "Nos esforzamos por ofrecer un servicio al cliente de alta calidad y superar las expectativas de nuestros clientes."
     },
     {
-      valores: `Comunidad: Creemos en la importancia de crear una comunidad de jugadores donde todos se sientan bienvenidos e incluidos.`,
+      titulo: "Comunidad",
+      descripcion: "Creemos en la importancia de crear una comunidad de jugadores donde todos se sientan bienvenidos e incluidos."
     },
   ];
-
   return (
     <section className="flex flex-col lg:flex-row pt-5 mx-6 lg:ml-6">
       <div className="flex flex-col lg:w-1/2">
@@ -32,19 +36,19 @@ const Compromiso = () => {
         </p>
         <ul>
           {infoValores.map((valor) => (
-            <li key={valor.valores} className="flex items-center p-3">
+            <li key={valor.titulo} className="flex items-center p-3">
               <div className="text-2xl">
                 <FaRegCircleCheck color="red" />
               </div>
               <p className="ml-3">
-                <strong>{valor.valores.split(":")[0]}:</strong>{" "}
-                {valor.valores.split(":")[1]}
+                <strong>{valor.titulo}:</strong>{" "}
+                {valor.descripcion}
               </p>
             </li>
           ))}
         </ul>
-        <div className="px-6 pt-4 pb-2">
-          <Boton texto="Conoce nuestra historia" />
+        <div className="px-6 pt-44">
+          <Boton texto="Conoce nuestra historia" key="boton-historia" />
         </div>
       </div>
       <div className="w-full lg:w-1/2 m-6 lg:ml-0">

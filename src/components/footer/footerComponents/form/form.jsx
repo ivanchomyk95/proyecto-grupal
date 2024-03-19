@@ -56,19 +56,16 @@ export default function Form() {
               </div>
               <div className={inputContainer}>
                 <label htmlFor="sexo">Sexo</label>
-                <input
-                  list="sexos"
-                  name="sexo"
-                  id="sexo"
+                <select
+                  defaultValue={"ns/nc"}
                   className={inputStyle}
-                />
-                <datalist id="sexos">
-                  <option
-                    className="focus:outline-none"
-                    value="Masculino"
-                  ></option>
-                  <option value="Femenino"></option>
-                </datalist>
+                  name="genero"
+                >
+                  <option value="ns/nc">no contesta</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                </select>
+                <br />
               </div>
             </fieldset>
             <fieldset className={fieldsetContainer}>
@@ -115,7 +112,7 @@ export default function Form() {
               </h3>
               <p className="max-w-lg">
                 La información provista como sexo,edad o su cumpleaños serán
-                utilizadas para seleccionas ofertas para ti.
+                utilizadas para seleccionas ofertas especiales para ti.
               </p>
             </details>
             <label htmlFor="acuerdo">

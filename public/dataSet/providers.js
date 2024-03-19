@@ -4,7 +4,7 @@ export const providers = [
     href: `https://www.riotgames.com/es`,
     img: `imgs/Footer/providers/Riot.png`,
     detail: `La empresa del mundo de los videojuegos más centrada en los
-    jugadores. Han publicado VALORANT, Teamfight Tactics, Legends of Runeterra y
+    jugadores. Han publicado Valorant, Teamfight Tactics, Legends of Runeterra y
     League of Legends: Wild Rift.`,
   },
   {
