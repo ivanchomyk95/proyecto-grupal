@@ -8,7 +8,7 @@ import Beneficios from "@/components/beneficios/Beneficios";
 import ShoppingCart from "@/components/newCart/shoppingCart";
 import { useState } from "react";
 import ComicCon from "@/components/ComicCon/ComicCon";
-import CardCarousel from "@/components/CarouselCards/Carousel";
+import CarouselApp from "@/components/CarouselCards/CarouselApp";
 import Footer from "@/components/footer/footer";
 
 export default function Home() {
@@ -22,12 +22,8 @@ export default function Home() {
       <Compromiso />
       <Oferta />
       <ComicCon />
-      <div className="container mt-8 h-full">
-        <h2 className="mb-6 text-center">
-          Adquiere éstas ofertas a menos de $1000
-        </h2>
-        <CardCarousel />
-      </div>
+      <CarouselApp/>
+
       <Footer />
       {isVisible && (
         <ShoppingCart isVisible={isVisible} setIsVisible={setIsVisible} />
