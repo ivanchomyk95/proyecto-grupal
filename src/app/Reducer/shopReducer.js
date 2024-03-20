@@ -7,6 +7,7 @@ export const shopReducer = (state, { type, payload }) => {
         ...state,
         products: [...state.products, ...payload.products],
         cartItems: [...payload.cartItems],
+        slider: [...payload.slider],
       };
     }
     default: {

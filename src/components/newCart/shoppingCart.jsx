@@ -9,7 +9,6 @@ export default function ShoppingCart({ setIsVisible, isVisible }) {
   useEffect(() => {
     updateState();
   }, []);
-  console.log(state);
 
   //shopping Modal Functions
   const handleClose = (e) => {

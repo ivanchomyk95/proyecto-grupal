@@ -1,5 +1,5 @@
 "use client";
-import { useReducer, createContext } from "react";
+import { useReducer, createContext, useEffect } from "react";
 import { shopReducer } from "../Reducer/shopReducer";
 import { shopInitialState } from "../Reducer/ShopInitialState";
 import { TYPES } from "@/app/actions/TYPES";
@@ -14,21 +14,27 @@ export default function ContextDataPRovider({ children }) {
     const ENDPOINTS = {
       products: "http://localhost:5000/products",
       cartItems: "http://localhost:5000/cartItems",
+      slider: "http://localhost:5000/slider",
     };
 
     const responses = {
       products: await axios.get(ENDPOINTS.products),
       cartItems: await axios.get(ENDPOINTS.cartItems),
+      slider: await axios.get(ENDPOINTS.slider),
     };
 
     const data = {
       products: await responses.products.data,
       cartItems: await responses.cartItems.data,
+      slider: await responses.slider.data,
     };
 
     dispatch({ type: TYPES.READ_STATE, payload: data });
   };
-
+  useEffect(() => {
+    updateState();
+  }, []);
+  console.log(state);
   return (
     <ContextData.Provider value={{ state, updateState }}>
       {children}
