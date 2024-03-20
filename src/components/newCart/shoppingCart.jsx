@@ -1,36 +1,16 @@
-import React, { useEffect, useReducer } from "react";
-import axios from "axios";
+import React, { useContext, useEffect } from "react";
 import Products from "./cartComponents/Products/Products";
 import CartItems from "./cartComponents/CartItems/CartItems";
-import { shopInitialState } from "@/app/Reducer/ShopInitialState";
-import { TYPES } from "@/app/actions/TYPES";
-import { shopReducer } from "@/app/Reducer/shopReducer";
+import { ContextData } from "@/app/ContexProvider/ContextProvider";
 
 export default function ShoppingCart({ setIsVisible, isVisible }) {
-  const [state, dispatch] = useReducer(shopReducer, shopInitialState);
+  const { state, updateState } = useContext(ContextData);
 
-  const updateState = async () => {
-    const ENDPOINTS = {
-      products: "http://localhost:5000/products",
-      cartItems: "http://localhost:5000/cartItems",
-    };
-
-    const responses = {
-      products: await axios.get(ENDPOINTS.products),
-      cartItems: await axios.get(ENDPOINTS.cartItems),
-    };
-
-    const data = {
-      products: await responses.products.data,
-      cartItems: await responses.cartItems.data,
-    };
-
-    dispatch({ type: TYPES.READ_STATE, payload: data });
-  };
   useEffect(() => {
     updateState();
   }, []);
   console.log(state);
+
   //shopping Modal Functions
   const handleClose = (e) => {
     if (e.target.id == "shopCart") {
@@ -39,7 +19,7 @@ export default function ShoppingCart({ setIsVisible, isVisible }) {
   };
   return (
     <div
-      className=" fixed inset-0 w-full  backdrop-blur-sm		"
+      className=" fixed inset-0 z-[100] w-full backdrop-blur-sm"
       id="shopCart"
       onClick={handleClose}
     >

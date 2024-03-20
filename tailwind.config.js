@@ -7,9 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors:{
-          primary: '#DD2719',
-          secondary: '#B31312'
+      zIndex: {
+        100: "100",
+      },
+      colors: {
+        primary: "#DD2719",
+        secondary: "#B31312",
       },
 
       container: {
@@ -24,4 +27,3 @@ module.exports = {
   },
   plugins: [],
 };
-
