@@ -5,6 +5,8 @@ import Oferta from "@/components/oferta/Oferta";
 import Navbar from "@/components/navbar/Navbar";
 import Card from "@/components/card/Card";
 import Beneficios from "@/components/beneficios/Beneficios";
+import Navbar2 from "@/components/navbar2/Navbar2";
+import Inicio from "@/components/inicio/Inicio";
 import ShoppingCart from "@/components/newCart/shoppingCart";
 import { useState } from "react";
 import ComicCon from "@/components/ComicCon/ComicCon";
@@ -15,7 +17,8 @@ export default function Home() {
 
   return (
     <div className="h-screen w-full">
-      <Navbar setIsVisible={setIsVisible} isVisible={isVisible} />
+      <Navbar2 />
+      <Inicio />
       <Card />
       <Beneficios />
       <Compromiso />

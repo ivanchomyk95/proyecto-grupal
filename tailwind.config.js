@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors:{
+          primary: '#DD2719',
+          secondary: '#B31312'
+      },
+
       container: {
         center: true,
       },
