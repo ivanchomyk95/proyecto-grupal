@@ -46,7 +46,7 @@ function Navbar2() {
         </div>
 
         <div className='absolute top-6 left-[275px] text-white cursor-pointer'>
-        <GrCart size={25} />
+        <GrCart id='carrito' size={25} />
         </div>
 
 

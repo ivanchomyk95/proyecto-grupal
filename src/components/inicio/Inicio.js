@@ -8,6 +8,7 @@ function Inicio() {
 
     const slider = [
         {
+          id: 23,
           url: '/imgs/rdr2_background.jpg',
           backgroundPosition: 'center',
           title: 'RED DEAD REDEMPTION 2',
@@ -19,6 +20,7 @@ function Inicio() {
           platforms:['steam.svg', 'play.svg', 'xbox.svg'],
         },
         {
+          id: 24,
           url: '/imgs/batman_background.png',
           backgroundPosition: 'center',
           title: 'BATMAN: ARKHAM KNIGHT',
@@ -30,6 +32,7 @@ function Inicio() {
           platforms:['steam.svg', 'play.svg', 'xbox.svg'],
         },
         {
+          id: 25,
           url: '/imgs/palworld_background.png',
           title: 'PALWORLD',
           subtitle: 'Palworld',
@@ -40,6 +43,7 @@ function Inicio() {
           platforms:['steam.svg', 'xbox.svg'],
         },
         {
+          id: 26,
           url: '/imgs/hf_background.jpg',
           title: 'HALF-LIFE ALYX',
           subtitle: 'Half-Life Alyx',
@@ -88,7 +92,7 @@ function Inicio() {
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
 
-      <div className='absolute z-50
+      <div className='absolute z-30
                       sm:mt-5
                       top-[50%] left-[50%] transform translate-x-[-50%] -translate-y-[80%] text-center text-white'>
         <h2 className='text-xl text-center font-bold mb-2 '>
