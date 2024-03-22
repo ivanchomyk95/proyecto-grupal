@@ -1,10 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { ContextData } from "@/app/ContexProvider/ContextProvider";
+import React, { useContext, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
-/*aa*/
-
 function Inicio() {
+  const { addToCart, state } = useContext(ContextData);
+
   const slider = [
     {
       url: "/imgs/rdr2_background.jpg",
@@ -140,7 +141,12 @@ function Inicio() {
                     />
                   ))}
                 </div>
-                <button className="hover:text-primary lg:w/13 mt-2 h-8 w-[180px] cursor-pointer bg-gray-700 font-medium text-white hover:bg-white lg:mx-auto ">
+                <button
+                  className="hover:text-primary lg:w/13 mt-2 h-8 w-[180px] cursor-pointer bg-gray-700 font-medium text-white hover:bg-white lg:mx-auto"
+                  onClick={() => {
+                    addToCart(slider[currentIndex]);
+                  }}
+                >
                   Añadir al carrito
                 </button>
               </div>

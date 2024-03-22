@@ -31,12 +31,16 @@ export default function ContextDataPRovider({ children }) {
 
     dispatch({ type: TYPES.READ_STATE, payload: data });
   };
+
   useEffect(() => {
     updateState();
   }, []);
-  console.log(state);
+
+  const addToCart = (itemInfo) => {
+    dispatch({ type: TYPES.ADD_TO_CART, payload: itemInfo });
+  };
   return (
-    <ContextData.Provider value={{ state, updateState }}>
+    <ContextData.Provider value={{ state, updateState, addToCart }}>
       {children}
     </ContextData.Provider>
   );

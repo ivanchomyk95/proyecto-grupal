@@ -6,10 +6,6 @@ import { ContextData } from "@/app/ContexProvider/ContextProvider";
 export default function ShoppingCart({ setIsVisible, isVisible }) {
   const { state, updateState } = useContext(ContextData);
 
-  useEffect(() => {
-    updateState();
-  }, []);
-
   //shopping Modal Functions
   const handleClose = (e) => {
     if (e.target.id == "shopCart") {
