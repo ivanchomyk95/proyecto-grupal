@@ -1,71 +1,32 @@
 import React from "react";
 import Boton from "../button/Button";
+import { cards } from "../../../public/dataSet/cards";
 
-const Card = () => {
-  return (
-   
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-10">
+export default function Card() {
+  const tarjeta = cards.map(({img, titulo, precio, promo}) => {
+    return (
       <div className="bg-[#c5cacd57] max-w-sm rounded-3xl overflow-hidden shadow-xl mx-auto transition-transform duration-300 ease-in-out hover:scale-105">
-        <img src="imgs/the-witcher.jpg" alt="The Witcher" className="w-full h-auto" />
+        <img src={img} alt="The Witcher" className="w-full h-auto" />
         <div className="px-6 py-4">
-          <div className="mb-2 text-xl font-bold">The Witcher</div>
-          <p className="text-base text-gray-700">$200</p>
+          <div className="mb-2 text-xl font-bold">{titulo}</div>
+          <p className="text-base text-gray-700"><s>{precio}</s></p>
+          <p className=" text-xl text-green-700 font-bold">{promo}</p>
         </div>
-        <div className="px-6 pt-4 pb-2">
-          <Boton
-            texto="Comprar" />
+        <div className="justify-center flex px-6 py-2">
+          <Boton texto="Comprar" />
         </div>
       </div>
+    );
+  });
 
-      <div className="mx-auto max-w-sm overflow-hidden rounded-3xl bg-[#c5cacd57] shadow-xl transition-transform duration-300 ease-in-out hover:scale-105" >
-        <img
-          src="imgs/r-evil.jpg"
-          alt="Resident Evil"
-          className="h-auto w-full"
-        />
-        <div className="px-6 py-4">
-          <div className="mb-2 text-xl font-bold">Resident Evil</div>
-          <p className="text-base text-gray-700">$300</p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <Boton
-            texto="Comprar" />
-        </div>
-      </div>
-
-      <div className="mx-auto max-w-sm overflow-hidden rounded-3xl bg-[#c5cacd57] shadow-xl transition-transform duration-300 ease-in-out hover:scale-105">
-        <img
-          src="imgs/serious-sam.jpg"
-          alt="Serious Sam"
-          className="h-auto w-full"
-        />
-        <div className="px-6 py-4">
-          <div className="mb-2 text-xl font-bold">Serious Sam</div>
-          <p className="text-base text-gray-700">$100</p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <Boton
-            texto="Comprar" />
-        </div>
-      </div>
-
-      <div className="mx-auto max-w-sm overflow-hidden rounded-3xl bg-[#c5cacd57] shadow-xl transition-transform duration-300 ease-in-out hover:scale-105">
-        <img
-          src="imgs/batman-arkham.jpg"
-          alt="Batman Arkham"
-          className="h-auto w-full"
-        />
-        <div className="px-6 py-4">
-          <div className="mb-2 text-xl font-bold">Batman Arkham</div>
-          <p className="text-base text-gray-700">$200</p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <Boton
-            texto="Comprar" />
-        </div>
+  return (
+    <div>
+      <h2 className="mb-10 text-center text-lg md:text-xl lg:text-2xl xl:text-3xl">
+        ¡Aprovecha Nuestras Ofertas de la Semana!
+      </h2>
+      <div id="cards" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-10">
+        {tarjeta}
       </div>
     </div>
   );
-};
-
-export default Card;
+}
