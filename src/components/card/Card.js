@@ -9,7 +9,7 @@ export default function Card() {
         <img src={img} alt="The Witcher" className="w-full h-auto" />
         <div className="px-6 py-4">
           <div className="mb-2 text-xl font-bold">{titulo}</div>
-          <p className="text-base text-gray-700"><s>{precio}</s></p>
+          <p className="text-base text-gray-600"><s>{precio}</s></p>
           <p className=" text-xl text-green-700 font-bold">{promo}</p>
         </div>
         <div className="justify-center flex px-6 py-2">
