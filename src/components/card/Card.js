@@ -5,7 +5,7 @@ import { cards } from "../../../public/dataSet/cards";
 export default function Card() {
   const tarjeta = cards.map(({img, titulo, precio, promo}) => {
     return (
-      <div className="bg-[#c5cacd57] max-w-sm rounded-3xl overflow-hidden shadow-xl mx-auto transition-transform duration-300 ease-in-out hover:scale-105">
+      <div className="bg-[#c5cacd57] max-w-xs rounded-3xl overflow-hidden shadow-xl mx-auto transition-transform duration-300 ease-in-out hover:scale-105">
         <img src={img} alt="The Witcher" className="w-full h-auto" />
         <div className="px-6 py-4">
           <div className="mb-2 text-xl font-bold">{titulo}</div>
