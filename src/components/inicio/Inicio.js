@@ -4,11 +4,13 @@ import React, { useContext, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 function Inicio() {
-  const { addToCart, state } = useContext(ContextData);
+  const { addToCart } = useContext(ContextData);
 
   const slider = [
     {
       url: "/imgs/rdr2_background.jpg",
+      id: "43",
+      name: "RED DEAD REDEMPTION 2",
       backgroundPosition: "center",
       title: "RED DEAD REDEMPTION 2",
       subtitle: "Red Dead Redemption 2",
@@ -21,6 +23,8 @@ function Inicio() {
     },
     {
       url: "/imgs/batman_background.png",
+      id: "42",
+      name: "BATMAN: ARKHAM KNIGHT",
       backgroundPosition: "center",
       title: "BATMAN: ARKHAM KNIGHT",
       subtitle: "Batman: Arkham Knight",
@@ -33,6 +37,8 @@ function Inicio() {
     },
     {
       url: "/imgs/palworld_background.png",
+      id: "41",
+      name: "PALWORLD",
       title: "PALWORLD",
       subtitle: "Palworld",
       description:
@@ -44,6 +50,8 @@ function Inicio() {
     },
     {
       url: "/imgs/hf_background.jpg",
+      id: "40",
+      name: "HALF-LIFE ALYX",
       title: "HALF-LIFE ALYX",
       subtitle: "Half-Life Alyx",
       description:
@@ -87,11 +95,11 @@ function Inicio() {
         }}
         className="h-full w-full bg-cover"
       >
-        <div className="text-primary absolute left-4 top-[50%] z-40 -translate-x-0 translate-y-[50%] cursor-pointer rounded-full p-0.5 text-2xl">
+        <div className="absolute left-4 top-[50%] z-40 -translate-x-0 translate-y-[50%] cursor-pointer rounded-full p-0.5 text-2xl text-primary">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
         </div>
 
-        <div className="text-primary absolute right-4 top-[50%] z-40 -translate-x-0 translate-y-[50%] cursor-pointer rounded-full p-0.5 text-2xl">
+        <div className="absolute right-4 top-[50%] z-40 -translate-x-0 translate-y-[50%] cursor-pointer rounded-full p-0.5 text-2xl text-primary">
           <BsChevronCompactRight onClick={nextSlide} size={30} />
         </div>
 
@@ -142,7 +150,7 @@ function Inicio() {
                   ))}
                 </div>
                 <button
-                  className="hover:text-primary lg:w/13 mt-2 h-8 w-[180px] cursor-pointer bg-gray-700 font-medium text-white hover:bg-white lg:mx-auto"
+                  className="lg:w/13 mt-2 h-8 w-[180px] cursor-pointer bg-gray-700 font-medium text-white hover:bg-white hover:text-primary lg:mx-auto"
                   onClick={() => {
                     addToCart(slider[currentIndex]);
                   }}

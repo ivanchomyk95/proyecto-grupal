@@ -7,26 +7,30 @@ export const shopReducer = (state, { type, payload }) => {
         ...state,
         products: [...state.products, ...payload.products],
         cartItems: [...payload.cartItems],
-        slider: [...payload.slider],
       };
     }
     case TYPES.ADD_TO_CART: {
-      console.log(payload);
-      let newItem = payload;
-      let itemInCart = state.cartItems.some((item) => item.id == newItem.id);
-      return itemInCart
-        ? {
-            ...state,
-          }
-        : {
-            ...state,
-            cartItems: [
-              ...state.cartItems,
-              {
-                newItem,
-              },
-            ],
-          };
+      let newItem = state.products.find((product) => product.id == payload.id);
+
+      if (newItem != undefined) {
+        let itemInCart = state.cartItems.some((item) => item.id == newItem.id);
+        return itemInCart
+          ? {
+              ...state,
+            }
+          : {
+              ...state,
+              cartItems: [
+                ...state.cartItems,
+                {
+                  ...newItem,
+                },
+              ],
+            };
+      }
+    }
+    case TYPES.REMOVE: {
+      console.log("REMOVIDO POR FINNNN");
     }
     default: {
     }

@@ -14,33 +14,40 @@ export default function ContextDataPRovider({ children }) {
     const ENDPOINTS = {
       products: "http://localhost:5000/products",
       cartItems: "http://localhost:5000/cartItems",
-      slider: "http://localhost:5000/slider",
     };
 
     const responses = {
       products: await axios.get(ENDPOINTS.products),
       cartItems: await axios.get(ENDPOINTS.cartItems),
-      slider: await axios.get(ENDPOINTS.slider),
     };
 
     const data = {
       products: await responses.products.data,
       cartItems: await responses.cartItems.data,
-      slider: await responses.slider.data,
     };
 
     dispatch({ type: TYPES.READ_STATE, payload: data });
   };
 
+  let totalPrice = state.cartItems.reduce((acc, cv) => {
+    return Number(acc) + Number(cv.price);
+  }, 0);
+
   useEffect(() => {
     updateState();
   }, []);
 
+  //Dispatch Actions
   const addToCart = (itemInfo) => {
     dispatch({ type: TYPES.ADD_TO_CART, payload: itemInfo });
   };
+
+  const removeItem = (itemInfo) => {
+    dispatch({ type: TYPES.REMOVE, payload: itemInfo });
+  };
+
   return (
-    <ContextData.Provider value={{ state, updateState, addToCart }}>
+    <ContextData.Provider value={{ state, totalPrice, addToCart, removeItem }}>
       {children}
     </ContextData.Provider>
   );
