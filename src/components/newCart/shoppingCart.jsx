@@ -4,7 +4,7 @@ import CartItems from "./cartComponents/CartItems/CartItems";
 import { ContextData } from "@/app/ContexProvider/ContextProvider";
 
 export default function ShoppingCart({ setIsVisible, isVisible }) {
-  const { state, totalPrice } = useContext(ContextData);
+  const { state, totalPrice, removeItem } = useContext(ContextData);
 
   //shopping Modal Functions
   const handleClose = (e) => {
@@ -21,9 +21,15 @@ export default function ShoppingCart({ setIsVisible, isVisible }) {
       <div className="  mx-auto my-5 flex h-5/6 w-4/5 flex-col items-center overflow-y-scroll rounded-md bg-[--color-light] px-5 py-5 pb-16  opacity-95 lg:absolute lg:right-2 lg:w-1/2  ">
         <h2 className="">TUS COMPRAS</h2>
         {/* <Products state={state} /> */}
-        <CartItems state={state} totalPrice={totalPrice} />
+        <CartItems
+          state={state}
+          totalPrice={totalPrice}
+          removeItem={removeItem}
+        />
         <button
-          onClick={() => {}}
+          onClick={() => {
+            removeItem;
+          }}
           className="font[--font-family-subtitle] my-2 w-60 rounded-md bg-[--color-primary] px-6 py-1
 text-lg  text-[--color-light] duration-300 hover:scale-105 hover:bg-[--color-dark]"
         >
