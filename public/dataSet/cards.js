@@ -2,7 +2,7 @@ export const cards = [
   {
     imageSrc: "../imgs/batman-arkham.jpg",
     id: 37,
-    name: "Batman Arkane: Asylum",
+    name: "Batman Arkam: Knight",
     price: "$29.99",
     promo: "$19.99",
   },
