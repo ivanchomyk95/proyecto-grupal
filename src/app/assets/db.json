@@ -136,6 +136,30 @@
       "name": "Tony Hawk's™ Pro Skater™ 1 + 2",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/tonyhawks.jpg"
+    },
+    {
+      "id": "43",
+      "name": "RED DEAD REDEMPTION 2",
+      "imageSrc": "/imgs/rdr2_game.jpg",
+      "price": "85.99"
+    },
+    {
+      "id": "42",
+      "name": "BATMAN: ARKHAM KNIGHT",
+      "imageSrc": "/imgs/batman.png",
+      "price": "45.99"
+    },
+    {
+      "id": "41",
+      "name": "PALWORLD",
+      "imageSrc": "/imgs/palworld.jpg",
+      "price": "19.99"
+    },
+    {
+      "id": "40",
+      "name": "HALF-LIFE ALYX",
+      "imageSrc": "/imgs/hf.png",
+      "price": "10.99"
     }
   ],
   "cartItems": [
@@ -162,50 +186,6 @@
         "/imgs/carrousel/Apex-Legends/apex-legends-3.jpg",
         "/imgs/carrousel/Apex-Legends/apex-legends-4.jpg"
       ]
-    }
-  ],
-  "slider": [
-    {
-      "url": "/imgs/rdr2_background.jpg",
-      "backgroundPosition": "center",
-      "title": "RED DEAD REDEMPTION 2",
-      "subtitle": "Red Dead Redemption 2",
-      "description": "Con un mundo abierto expansivo y detallado, el juego ofrece una experiencia inmersiva donde puedes explorar vastos paisajes, y tomar decisiones morales que afectarán el desarrollo de la historia. ",
-      "imageAlt": "/imgs/rdr2_game.jpg",
-      "prevPrice": "$ 99.99",
-      "price": "$ 85.99",
-      "platforms": ["steam.svg", "play.svg", "xbox.svg"]
-    },
-    {
-      "url": "/imgs/batman_background.png",
-      "backgroundPosition": "center",
-      "title": "BATMAN: ARKHAM KNIGHT",
-      "subtitle": "Batman: Arkham Knight",
-      "description": "Con una narrativa envolvente, gráficos impresionantes y un excepcional sistema de combate, los jugadores exploran la ciudad caótica, resuelven intrincados acertijos y combaten amenazas icónicas.",
-      "imageAlt": "/imgs/batman.png",
-      "prevPrice": "$ 59.99",
-      "price": "$ 45.99",
-      "platforms": ["steam.svg", "play.svg", "xbox.svg"]
-    },
-    {
-      "url": "/imgs/palworld_background.png",
-      "title": "PALWORLD",
-      "subtitle": "Palworld",
-      "description": "Los jugadores controlan un avatar personalizable desde una perspectiva en tercera persona con el objetivo de explorar las islas Palpagos de mundo abierto y descubrir sus secretos.",
-      "imageAlt": "/imgs/palworld.jpg",
-      "prevPrice": "$ 39.99",
-      "price": "$ 19.99",
-      "platforms": ["steam.svg", "xbox.svg"]
-    },
-    {
-      "url": "/imgs/hf_background.jpg",
-      "title": "HALF-LIFE ALYX",
-      "subtitle": "Half-Life Alyx",
-      "description": "Profundiza en la historia del universo de Half-Life y proporciona más contexto sobre los eventos que preceden a Half-Life 2. El juego ha sido elogiado por su inmersidad.",
-      "imageAlt": "/imgs/hf.png",
-      "prevPrice": "$ 25.99",
-      "price": "$ 10.99",
-      "platforms": ["steam.svg"]
     }
   ]
 }

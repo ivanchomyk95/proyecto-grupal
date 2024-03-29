@@ -5,11 +5,43 @@ export const shopReducer = (state, { type, payload }) => {
     case TYPES.READ_STATE: {
       return {
         ...state,
-        products: [...state.products, ...payload.products],
+        products: [...payload.products],
         cartItems: [...payload.cartItems],
-        slider: [...payload.slider],
       };
     }
+    case TYPES.ADD_TO_CART: {
+      let newItem = state.products.find((product) => product.id == payload.id);
+
+      if (newItem != undefined) {
+        let itemInCart = state.cartItems.some((item) => item.id == newItem.id);
+        return itemInCart
+          ? {
+              ...state,
+            }
+          : {
+              ...state,
+              cartItems: [
+                ...state.cartItems,
+                {
+                  ...newItem,
+                },
+              ],
+            };
+      }
+    }
+    case TYPES.REMOVE: {
+      return {
+        ...state,
+        cartItems: state.cartItems.filter((cartItem) => cartItem.id != payload),
+      };
+    }
+    case TYPES.REMOVE_ALL: {
+      return {
+        ...state,
+        cartItems: [],
+      };
+    }
+
     default: {
     }
   }
