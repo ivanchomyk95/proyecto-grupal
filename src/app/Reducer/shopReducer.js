@@ -5,7 +5,7 @@ export const shopReducer = (state, { type, payload }) => {
     case TYPES.READ_STATE: {
       return {
         ...state,
-        products: [...state.products, ...payload.products],
+        products: [...payload.products],
         cartItems: [...payload.cartItems],
       };
     }

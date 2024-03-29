@@ -1,5 +1,5 @@
 "use client";
-import { useReducer, createContext, useEffect } from "react";
+import { useReducer, createContext, useEffect, useState } from "react";
 import { shopReducer } from "../Reducer/shopReducer";
 import { shopInitialState } from "../Reducer/ShopInitialState";
 import { TYPES } from "@/app/actions/TYPES";
@@ -28,26 +28,37 @@ export default function ContextDataPRovider({ children }) {
 
     dispatch({ type: TYPES.READ_STATE, payload: data });
   };
-
-  let totalPrice = state.cartItems.reduce((acc, cv) => {
-    return Number(acc) + Number(cv.price);
-  }, 0);
-
   useEffect(() => {
     updateState();
   }, []);
+
+  const [totalPrice, setTotalPrice] = useState(0);
+  useEffect(() => {
+    let totalPrice = state.cartItems.reduce((acc, cv) => {
+      return Number(acc) + Number(cv.price);
+    }, 0);
+    setTotalPrice(totalPrice);
+  }, [state]);
 
   //Dispatch Actions
   const addToCart = (itemInfo) => {
     dispatch({ type: TYPES.ADD_TO_CART, payload: itemInfo });
   };
 
-  const removeItem = (itemInfo) => {
-    dispatch({ type: TYPES.REMOVE, payload: itemInfo });
-  };
+  const [isRemoved, setIsRemoved] = useState(false);
+  useEffect(() => {
+    const removeItem = (itemInfo) => {
+      dispatch({ type: TYPES.REMOVE, payload: itemInfo });
+    };
+    if (isRemoved) {
+      removeItem();
+    }
+  }, [isRemoved]);
 
   return (
-    <ContextData.Provider value={{ state, totalPrice, addToCart, removeItem }}>
+    <ContextData.Provider
+      value={{ state, totalPrice, addToCart, setIsRemoved }}
+    >
       {children}
     </ContextData.Provider>
   );

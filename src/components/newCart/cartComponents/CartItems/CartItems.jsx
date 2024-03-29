@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartItem from "./CartItem";
+import { ContextData } from "@/app/ContexProvider/ContextProvider";
 
-export default function CartItems({ state, totalPrice, removeItem }) {
+export default function CartItems() {
+  const { state, totalPrice } = useContext(ContextData);
+
   return (
     <div className="w-full">
       <h3 className="font-semibold">Juegos seleccionados</h3>
       <div>
         {state.cartItems.map((cartItem, index) => {
-          return (
-            <CartItem key={index} cartItem={cartItem} removeItem={removeItem} />
-          );
+          return <CartItem key={index} cartItem={cartItem} />;
         })}
       </div>
       <div className="my-5 flex w-full justify-between px-2 text-xl font-extrabold">
