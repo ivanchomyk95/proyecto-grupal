@@ -55,11 +55,12 @@ export default function Form() {
                 />
               </div>
               <div className={inputContainer}>
-                <label htmlFor="sexo">Sexo</label>
+                <label htmlFor="genero">Sexo</label>
                 <select
                   defaultValue={"ns/nc"}
                   className={inputStyle}
                   name="genero"
+                  id="genero"
                 >
                   <option value="ns/nc">NS/NC</option>
                   <option value="Masculino">Masculino</option>

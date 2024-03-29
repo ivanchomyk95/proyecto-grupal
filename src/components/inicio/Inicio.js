@@ -77,13 +77,13 @@ function Inicio() {
     setCurrentIndex(newIndex);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 6000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nextSlide();
+  //   }, 6000);
 
-    return () => clearInterval(interval);
-  }, [currentIndex]);
+  //   return () => clearInterval(interval);
+  // }, [currentIndex]);
 
   return (
     <div className=" mb-36 h-[780px] w-full ">

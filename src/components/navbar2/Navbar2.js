@@ -57,7 +57,7 @@ function Navbar2({ isVisible, setIsVisible }) {
           isSideMenuOpen ? "left-0 transition-all" : "left-full transition-all",
         )}
       >
-        <section className="text-primary absolute right-0 top-0 z-50 flex h-screen w-56 flex-col gap-10 bg-white p-8">
+        <section className="absolute right-0 top-0 z-50 flex h-screen w-56 flex-col gap-10 bg-white p-8 text-primary">
           <IoClose
             onClick={() => setMenu(false)}
             className="mb-8 mt-0 cursor-pointer text-3xl"

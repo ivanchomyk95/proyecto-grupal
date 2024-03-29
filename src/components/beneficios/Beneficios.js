@@ -48,9 +48,12 @@ const profitInfo = [
 const Beneficios = () => {
   const profitTitle = "Adquiere todos tus juegos favoritos en Game Zone";
 
-  const renderProfit = (profit) => {
+  const renderProfit = (profit, index) => {
     return (
-      <div className="container m-4 flex max-w-[200px] flex-col items-center justify-center rounded-lg bg-white p-4 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105">
+      <div
+        key={index}
+        className="container m-4 flex max-w-[200px] flex-col items-center justify-center rounded-lg bg-white p-4 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
+      >
         <div className="mb-4 h-[25%] text-indigo-950">{profit.pIcon}</div>
         <h4 className="mb-3 h-[20%] text-center text-xl font-semibold">
           {profit.pSubt}
