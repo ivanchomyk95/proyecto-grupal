@@ -32,32 +32,25 @@ export default function ContextDataPRovider({ children }) {
     updateState();
   }, []);
 
-  const [totalPrice, setTotalPrice] = useState(0);
-  useEffect(() => {
-    let totalPrice = state.cartItems.reduce((acc, cv) => {
-      return Number(acc) + Number(cv.price);
-    }, 0);
-    setTotalPrice(totalPrice);
-  }, [state]);
+  let totalPrice = state.cartItems.reduce((acc, cv) => {
+    return Number(acc) + Number(cv.price);
+  }, 0);
 
   //Dispatch Actions
   const addToCart = (itemInfo) => {
     dispatch({ type: TYPES.ADD_TO_CART, payload: itemInfo });
   };
 
-  const [isRemoved, setIsRemoved] = useState(false);
-  useEffect(() => {
-    const removeItem = (itemInfo) => {
-      dispatch({ type: TYPES.REMOVE, payload: itemInfo });
-    };
-    if (isRemoved) {
-      removeItem();
-    }
-  }, [isRemoved]);
+  const removeItem = (itemInfo) => {
+    dispatch({ type: TYPES.REMOVE, payload: itemInfo });
+  };
+  const removeAll = () => {
+    dispatch({ type: TYPES.REMOVE_ALL });
+  };
 
   return (
     <ContextData.Provider
-      value={{ state, totalPrice, addToCart, setIsRemoved }}
+      value={{ state, totalPrice, addToCart, removeItem, removeAll }}
     >
       {children}
     </ContextData.Provider>

@@ -30,8 +30,18 @@ export const shopReducer = (state, { type, payload }) => {
       }
     }
     case TYPES.REMOVE: {
-      console.log("REMOVIDO POR FINNNN");
+      return {
+        ...state,
+        cartItems: state.cartItems.filter((cartItem) => cartItem.id != payload),
+      };
     }
+    case TYPES.REMOVE_ALL: {
+      return {
+        ...state,
+        cartItems: [],
+      };
+    }
+
     default: {
     }
   }
