@@ -7,7 +7,7 @@ import WhatsApp from "./footerComponents/whatsApp/whatsApp";
 
 export default function Footer() {
   return (
-    <footer className=" min-w-full">
+    <footer className=" min-w-full bg-slate-100">
       <Providers />
       <div id="formAndAside" className="lg:flex  lg:justify-around">
         <Form />
@@ -18,9 +18,9 @@ export default function Footer() {
       </div>
       <div className="text-right text-sm">
         <img
-          src="imgs/image.png"
+          src="logo-2.svg"
           alt="Logo"
-          className="mx-auto  my-3 w-24  rounded-md "
+          className="-my-3  mx-auto mt-3  w-28 rounded-md  bg-[--color-dark] opacity-90"
         />
         <small className="bottom-0 pr-4">
           Copyright © 2023 ProyectoNumenDevs. All Rights Reserved.

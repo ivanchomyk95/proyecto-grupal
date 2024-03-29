@@ -1,6 +1,6 @@
 "use client";
 import { ContextData } from "@/app/ContexProvider/ContextProvider";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 function Inicio() {
@@ -77,16 +77,16 @@ function Inicio() {
     setCurrentIndex(newIndex);
   };
 
-  /* useEffect(() =>{
-        const interval = setInterval(() =>{
-            nextSlide();
-        }, 6000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 6000);
 
-        return () => clearInterval(interval);
-    }, [currentIndex]) */
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   return (
-    <div className=" mb-36 h-[780px] w-screen ">
+    <div className=" mb-36 h-[780px] w-full ">
       <div
         style={{
           backgroundImage: `url(${slider[currentIndex].url})`,
