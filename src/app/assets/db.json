@@ -160,32 +160,55 @@
       "name": "HALF-LIFE ALYX",
       "imageSrc": "/imgs/hf.png",
       "price": "10.99"
-    }
-  ],
-  "cartItems": [
-    {
-      "id": 1,
-      "name": "Age of Empires II",
-      "price": 400,
-      "imageSrc": "imgs/carrousel/Carruselimgs/AOEPortada.jpg",
-      "additionalImages": [
-        "/imgs/carrousel/AOE/ss_8f30a6ae45244f12ebdb48f99393aa9c93aaa398.1920x1080.jpg",
-        "/imgs/carrousel/AOE/ss_b42dec99b197fea9882abc333e2cfb0a77dd3ed2.1920x1080.jpg",
-        "/imgs/carrousel/AOE/ss_c13d14fd11f3deb2fa5f592cceb98db3d48ef10b.1920x1080.jpg",
-        "/imgs/carrousel/AOE/ss_f270aa4e146459dc8b75a69bfecf23d13b0e8df6.1920x1080.jpg"
-      ]
     },
     {
-      "id": 2,
-      "name": "Apex Legends",
-      "price": 300,
-      "imageSrc": "imgs/carrousel/Carruselimgs/apex-legends-header.jpg",
-      "additionalImages": [
-        "/imgs/carrousel/Apex-Legends/apex-legends-1.jpg",
-        "/imgs/carrousel/Apex-Legends/apex-legends-2.jpg",
-        "/imgs/carrousel/Apex-Legends/apex-legends-3.jpg",
-        "/imgs/carrousel/Apex-Legends/apex-legends-4.jpg"
-      ]
+      "imageSrc": "../imgs/batman-arkham.jpg",
+      "id": 37,
+      "name": "Batman Arkane: Asylum",
+      "price": "19.99"
+    },
+    {
+      "imageSrc": "../imgs/the-witcher.jpg",
+      "id": 36,
+      "name": "The Witcher 3",
+      "price": "29.99"
+    },
+    {
+      "imageSrc": "../imgs/r-evil.jpg",
+      "id": 35,
+      "name": "Resident Evil Village",
+      "price": "29.99"
+    },
+    {
+      "imageSrc": "../imgs/serious-sam.jpg",
+      "id": 34,
+      "name": "Serious Sam 4",
+      "price": "18.99"
+    },
+    {
+      "imageSrc": "../imgs/Skyrim.jpg",
+      "id": 33,
+      "name": "Skyrim V",
+      "price": "23.99"
+    },
+    {
+      "imageSrc": "../imgs/diablo-4.jpg",
+      "id": 32,
+      "name": "Diablo 4",
+      "price": "69.99"
+    },
+    {
+      "imageSrc": "../imgs/re-7.jpg",
+      "id": 31,
+      "name": "Resident Evil Biohazard",
+      "price": "10.47"
+    },
+    {
+      "imageSrc": "../imgs/vampyr.jpg",
+      "id": 30,
+      "name": "The Vampyr",
+      "price": "18.99"
     }
-  ]
+  ],
+  "cartItems": []
 }

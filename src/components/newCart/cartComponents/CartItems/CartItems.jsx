@@ -19,7 +19,7 @@ export default function CartItems() {
       </div>
       <div className="my-5 flex w-full justify-between px-2 text-xl font-extrabold">
         <h3>TOTAL: </h3>
-        <h3>$ {totalPrice}</h3>
+        <h3>$ {totalPrice.toFixed(2)}</h3>
       </div>
     </div>
   );
