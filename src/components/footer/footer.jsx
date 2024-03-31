@@ -18,9 +18,9 @@ export default function Footer() {
       </div>
       <div className="text-right text-sm">
         <img
-          src="logo-2.svg"
+          src="logo-1.svg"
           alt="Logo"
-          className="-my-3  mx-auto mt-3  w-28 rounded-md  bg-[--color-dark] opacity-90"
+          className="-my-3  mx-auto mt-3  w-28 rounded-md  "
         />
         <small className="bottom-0 pr-4">
           Copyright © 2023 ProyectoNumenDevs. All Rights Reserved.

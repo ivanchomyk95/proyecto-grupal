@@ -9,7 +9,7 @@ function Inicio() {
 
   const slider = [
     {
-      id: 22,
+      id: 43,
       url: "/imgs/rdr2_background.jpg",
       urlLarge: "/imgs/rdr2_large.png",
       backgroundPosition: "center",
@@ -23,7 +23,7 @@ function Inicio() {
       platforms: ["steam.svg", "play.svg", "xbox.svg"],
     },
     {
-      id: 23,
+      id: 42,
       url: "/imgs/batman_background.png",
       urlLarge: "/imgs/batman_large.png",
       backgroundPosition: "center",
@@ -37,7 +37,7 @@ function Inicio() {
       platforms: ["steam.svg", "play.svg", "xbox.svg"],
     },
     {
-      id: 14,
+      id: 41,
       url: "/imgs/palworld_background.png",
       urlLarge: "/imgs/palworld_large.png",
       title: "PALWORLD",
@@ -50,7 +50,7 @@ function Inicio() {
       platforms: ["steam.svg", "xbox.svg"],
     },
     {
-      id: 24,
+      id: 40,
       url: "/imgs/hf_background.jpg",
       urlLarge: "/imgs/hf_background.jpg",
       title: "HALF-LIFE ALYX",
@@ -157,6 +157,9 @@ function Inicio() {
                   <button
                     className="mt-3 h-9 w-[90%] cursor-pointer
                  bg-gray-700 font-medium text-white hover:bg-white hover:text-primary lg:w-56 "
+                  onClick={()=>{
+                    addToCart(slider[currentIndex])
+                  }}
                   >
                     Añadir al carrito
                   </button>

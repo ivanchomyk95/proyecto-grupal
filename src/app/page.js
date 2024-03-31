@@ -20,7 +20,7 @@ export default function Home() {
     <div className="h-screen w-full">
       <ContextData>
         <Navbar/>
-        <Header/>
+        <Header isVisible={isVisible} setIsVisible={setIsVisible}/>
         <Inicio />
         <Card />
         <Beneficios />

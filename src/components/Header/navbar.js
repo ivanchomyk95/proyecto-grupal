@@ -4,7 +4,7 @@ import { IoClose } from "react-icons/io5";
 import Link from "next/link";
 import clsx from "clsx";
 
-function Navbar({ isVisible, setIsVisible }) {
+function Navbar() {
     const [isSideMenuOpen, setMenu] = useState(false);
   
     const navLinks = [

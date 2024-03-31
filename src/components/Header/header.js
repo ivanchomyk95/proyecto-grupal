@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 //Animación Scroll del Navbar
 
-const Header = () => {
+const Header = ({ isVisible, setIsVisible }) => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
   const [scrollingUp, setScrollingUp] = useState(false);
