@@ -1,53 +1,61 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { useMediaQuery } from "@react-hook/media-query";
 
-/*aa*/
 
 function Inicio() {
   const slider = [
     {
+      id: 22,
       url: "/imgs/rdr2_background.jpg",
+      urlLarge: "/imgs/rdr2_large.png",
       backgroundPosition: "center",
       title: "RED DEAD REDEMPTION 2",
-      subtitle: "Red Dead Redemption 2",
+      name: "Red Dead Redemption 2",
       description:
         "Con un mundo abierto expansivo y detallado, el juego ofrece una experiencia inmersiva donde puedes explorar vastos paisajes, y tomar decisiones morales que afectarán el desarrollo de la historia. ",
-      imageAlt: "/imgs/rdr2_game.jpg",
+      imageSrc: "/imgs/rdr2_game.jpg",
       prevPrice: "$ 99.99",
       price: "$ 85.99",
       platforms: ["steam.svg", "play.svg", "xbox.svg"],
     },
     {
+      id: 23,
       url: "/imgs/batman_background.png",
+      urlLarge: "/imgs/batman_large.png",
       backgroundPosition: "center",
       title: "BATMAN: ARKHAM KNIGHT",
-      subtitle: "Batman: Arkham Knight",
+      name: "Batman: Arkham Knight",
       description:
         "Con una narrativa envolvente, gráficos impresionantes y un excepcional sistema de combate, los jugadores exploran la ciudad caótica, resuelven intrincados acertijos y combaten amenazas icónicas.",
-      imageAlt: "/imgs/batman.png",
+      imageSrc: "/imgs/batman.png",
       prevPrice: "$ 59.99",
       price: "$ 45.99",
       platforms: ["steam.svg", "play.svg", "xbox.svg"],
     },
     {
+      id: 14,
       url: "/imgs/palworld_background.png",
+      urlLarge: "/imgs/palworld_large.png",
       title: "PALWORLD",
-      subtitle: "Palworld",
+      name: "Palworld",
       description:
         "Los jugadores controlan un avatar personalizable desde una perspectiva en tercera persona con el objetivo de explorar las islas Palpagos de mundo abierto y descubrir sus secretos.",
-      imageAlt: "/imgs/palworld.jpg",
+      imageSrc: "/imgs/palworld.jpg",
       prevPrice: "$ 39.99",
       price: "$ 19.99",
       platforms: ["steam.svg", "xbox.svg"],
     },
     {
+      id: 24,
       url: "/imgs/hf_background.jpg",
+      urlLarge: "/imgs/hf_background.jpg",
       title: "HALF-LIFE ALYX",
-      subtitle: "Half-Life Alyx",
+      name: "Half-Life Alyx",
       description:
         "Profundiza en la historia del universo de Half-Life y proporciona más contexto sobre los eventos que preceden a Half-Life 2. El juego ha sido elogiado por su inmersidad.",
-      imageAlt: "/imgs/hf.png",
+      imageSrc: "/imgs/hf.png",
       prevPrice: "$ 25.99",
       price: "$ 10.99",
       platforms: ["steam.svg"],
@@ -55,6 +63,8 @@ function Inicio() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const isLargeScreen = useMediaQuery("(min-width: 1024px)");
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -77,12 +87,17 @@ function Inicio() {
     }, [currentIndex]) */
 
   return (
-    <div className=" mb-36 h-[780px] w-screen ">
+    <div className=" mb-36 w-screen h-full">
       <div
         style={{
-          backgroundImage: `url(${slider[currentIndex].url})`,
+          backgroundImage: `url(${
+            isLargeScreen ?
+            slider[currentIndex].urlLarge
+          : slider[currentIndex].url
+          })`,
           backgroundPosition:
             slider[currentIndex].backgroundPosition || "center",
+            transition: "background-image 0.5s ease",
         }}
         className="h-full w-full bg-cover"
       >
@@ -96,41 +111,38 @@ function Inicio() {
 
         <div
           className="absolute left-[50%]
-                      top-[50%]
-                      z-50 -translate-y-[80%] translate-x-[-50%] transform text-center text-white sm:mt-5"
+                      top-[60%]
+                      z-40 -translate-y-[80%] translate-x-[-50%] transform text-center text-white lg:top-96"
         >
-          <h2 className="mb-2 text-center text-xl font-bold ">
-            <div
-              className="absolute z-[-1] mt-[510px] flex h-[150px] w-48 content-center
-         items-center justify-center bg-zinc-900 sm:ml-[50px]
-         lg:left-[287px] lg:top-[-40%]"
-            ></div>
+          
+          <h2 className="mb-2 text-center text-xl font-bold lg:text-2xl">
             {slider[currentIndex].title}
           </h2>
-          <p className="mb-5 text-center text-base lg:mx-auto lg:w-1/2">
+          <p className="mb-3 w-46 text-center text-sm lg:mx-auto lg:text-lg">
             {slider[currentIndex].description}
           </p>
-          {slider[currentIndex].imageAlt && (
+          <div className="bg-zinc-800 pb-36 mb-[-70%] px-0 lg:mb-[-20%] lg:mx-[35%] lg:pt-2">
+          {slider[currentIndex].imageSrc && (
             <div
-              className="mx-auto h-56 w-48 shadow-xl"
+              className="-z-10 mx-auto h-56 w-48 shadow-xl lg:w-60 lg:pt-2"
               style={{
-                backgroundImage: `url(${slider[currentIndex].imageAlt})`,
+                backgroundImage: `url(${slider[currentIndex].imageSrc})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
-              <div className="z-1 inset-0 bottom-0 pb-8  text-center text-white">
-                <h3 className="pt-[230px] text-xs ">
-                  {slider[currentIndex].subtitle}
+              <div className=" inset-0 bottom-0 pb-8  text-center text-white">
+                <h3 className="pt-[230px] text-xs lg:text-base lg:font-bold lg:pt-56">
+                  {slider[currentIndex].name}
                 </h3>
-                <p className="pr-28 pt-2 text-sm line-through">
+                <p className="pr-28 pt-2 text-sm line-through lg:pr-40 lg:text-xs">
                   {slider[currentIndex].prevPrice}
                 </p>
-                <p className="pl-2 pr-28 text-lg font-bold text-green-500  ">
+                <p className="pl-2 pr-28 text-lg font-bold text-green-500 lg:pr-36 lg:text-xl">
                   {slider[currentIndex].price}
                 </p>
 
-                <div className="ml-24 mt-[-30px] flex justify-center">
+                <div className="ml-24 mt-[-30px] flex justify-center lg:ml-36">
                   {slider[currentIndex].platforms.map((platforms) => (
                     <img
                       key={platforms}
@@ -140,14 +152,17 @@ function Inicio() {
                     />
                   ))}
                 </div>
-                <button className="hover:text-primary lg:w/13 mt-2 h-8 w-[180px] cursor-pointer bg-gray-700 font-medium text-white hover:bg-white lg:mx-auto ">
+                
+                <button className="hover:text-primary mt-3 h-9 w-[90%]
+                 cursor-pointer bg-gray-700 font-medium text-white hover:bg-white lg:w-56 ">
                   Añadir al carrito
                 </button>
               </div>
-            </div>
+              </div>
+       
           )}
-          <span className="text-sm">{slider[currentIndex].spanText}</span>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -97,7 +97,7 @@ const shoppingInitialState =
       id: 14,
       name: "Palworld",
       price: 2400,
-      imageSrc: "imgs/CarouselBlog/palworld.jpg",
+      imageSrc: "/imgs/palworld.jpg",
      
     },
     
@@ -150,11 +150,29 @@ const shoppingInitialState =
     },
     
     {
-      id: 12,
+      id: 21,
       name: "Tony Hawk's™ Pro Skater™ 1 + 2",
       price: 2400,
       imageSrc: "imgs/CarouselBlog/tonyhawks.jpg",
      
+    },
+    {
+      id: 22,
+      name: "Red Dead Redemption 2",
+      price: 85.99,
+      imageSrc: "/imgs/rdr2_game.jpg",
+    },
+    {
+      id: 23,
+      name: "Batman: Arkham Night",
+      price: 45.99,
+      imageSrc: "/imgs/batman.png",
+    },
+    {
+      id: 23,
+      name: "Half Life Alyx",
+      price: 10.99,
+      imageSrc: "/imgs/hf.png",
     }
   ]
  ;
