@@ -1,5 +1,5 @@
 "use client";
-import { useReducer, createContext, useEffect } from "react";
+import { useReducer, createContext, useEffect, useState } from "react";
 import { shopReducer } from "../Reducer/shopReducer";
 import { shopInitialState } from "../Reducer/ShopInitialState";
 import { TYPES } from "@/app/actions/TYPES";
@@ -14,19 +14,16 @@ export default function ContextDataPRovider({ children }) {
     const ENDPOINTS = {
       products: "http://localhost:5000/products",
       cartItems: "http://localhost:5000/cartItems",
-      slider: "http://localhost:5000/slider",
     };
 
     const responses = {
       products: await axios.get(ENDPOINTS.products),
       cartItems: await axios.get(ENDPOINTS.cartItems),
-      slider: await axios.get(ENDPOINTS.slider),
     };
 
     const data = {
       products: await responses.products.data,
       cartItems: await responses.cartItems.data,
-      slider: await responses.slider.data,
     };
 
     dispatch({ type: TYPES.READ_STATE, payload: data });
@@ -34,9 +31,27 @@ export default function ContextDataPRovider({ children }) {
   useEffect(() => {
     updateState();
   }, []);
-  console.log(state);
+
+  let totalPrice = state.cartItems.reduce((acc, cv) => {
+    return Number(acc) + Number(cv.price);
+  }, 0);
+
+  //Dispatch Actions
+  const addToCart = (itemInfo) => {
+    dispatch({ type: TYPES.ADD_TO_CART, payload: itemInfo });
+  };
+
+  const removeItem = (itemInfo) => {
+    dispatch({ type: TYPES.REMOVE, payload: itemInfo });
+  };
+  const removeAll = () => {
+    dispatch({ type: TYPES.REMOVE_ALL });
+  };
+
   return (
-    <ContextData.Provider value={{ state, updateState }}>
+    <ContextData.Provider
+      value={{ state, totalPrice, addToCart, removeItem, removeAll }}
+    >
       {children}
     </ContextData.Provider>
   );

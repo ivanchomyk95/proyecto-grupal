@@ -9,7 +9,7 @@ import {
 export default function Form() {
   return (
     <div className="mx-12 my-2 flex justify-center   ">
-      <fieldset className="border-4 border-double border-slate-600 p-4 ring-slate-200  ring-offset-4 hover:ring-4">
+      <fieldset className="border-4 border-double border-slate-600 p-4 ring-slate-200  ring-offset-4 ring-offset-transparent hover:ring-4">
         <legend>
           <h3>
             <b>Infórmate sobre ofertas especiales </b>
@@ -55,13 +55,14 @@ export default function Form() {
                 />
               </div>
               <div className={inputContainer}>
-                <label htmlFor="sexo">Sexo</label>
+                <label htmlFor="genero">Sexo</label>
                 <select
                   defaultValue={"ns/nc"}
                   className={inputStyle}
                   name="genero"
+                  id="genero"
                 >
-                  <option value="ns/nc">no contesta</option>
+                  <option value="ns/nc">NS/NC</option>
                   <option value="Masculino">Masculino</option>
                   <option value="Femenino">Femenino</option>
                 </select>
@@ -123,7 +124,7 @@ export default function Form() {
                   name="términos"
                   id="acuerdo"
                   required
-                  className="mx-3 size-5"
+                  className="border-Red-600 mx-3 size-5 accent-blue-500 hover:cursor-pointer"
                 />
               </b>
             </label>

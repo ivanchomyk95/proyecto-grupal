@@ -136,76 +136,79 @@
       "name": "Tony Hawk's™ Pro Skater™ 1 + 2",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/tonyhawks.jpg"
+    },
+    {
+      "id": "43",
+      "name": "RED DEAD REDEMPTION 2",
+      "imageSrc": "/imgs/rdr2_game.jpg",
+      "price": "85.99"
+    },
+    {
+      "id": "42",
+      "name": "BATMAN: ARKHAM KNIGHT",
+      "imageSrc": "/imgs/batman.png",
+      "price": "45.99"
+    },
+    {
+      "id": "41",
+      "name": "PALWORLD",
+      "imageSrc": "/imgs/palworld.jpg",
+      "price": "19.99"
+    },
+    {
+      "id": "40",
+      "name": "HALF-LIFE ALYX",
+      "imageSrc": "/imgs/hf.png",
+      "price": "10.99"
+    },
+    {
+      "imageSrc": "../imgs/batman-arkham.jpg",
+      "id": 37,
+      "name": "Batman Arkam: Knight",
+      "price": "19.99"
+    },
+    {
+      "imageSrc": "../imgs/the-witcher.jpg",
+      "id": 36,
+      "name": "The Witcher 3",
+      "price": "29.99"
+    },
+    {
+      "imageSrc": "../imgs/r-evil.jpg",
+      "id": 35,
+      "name": "Resident Evil Village",
+      "price": "29.99"
+    },
+    {
+      "imageSrc": "../imgs/serious-sam.jpg",
+      "id": 34,
+      "name": "Serious Sam 4",
+      "price": "18.99"
+    },
+    {
+      "imageSrc": "../imgs/Skyrim.jpg",
+      "id": 33,
+      "name": "Skyrim V",
+      "price": "23.99"
+    },
+    {
+      "imageSrc": "../imgs/diablo-4.jpg",
+      "id": 32,
+      "name": "Diablo 4",
+      "price": "69.99"
+    },
+    {
+      "imageSrc": "../imgs/re-7.jpg",
+      "id": 31,
+      "name": "Resident Evil Biohazard",
+      "price": "10.47"
+    },
+    {
+      "imageSrc": "../imgs/vampyr.jpg",
+      "id": 30,
+      "name": "The Vampyr",
+      "price": "18.99"
     }
   ],
-  "cartItems": [
-    {
-      "id": 1,
-      "name": "Age of Empires II",
-      "price": 400,
-      "imageSrc": "imgs/carrousel/Carruselimgs/AOEPortada.jpg",
-      "additionalImages": [
-        "/imgs/carrousel/AOE/ss_8f30a6ae45244f12ebdb48f99393aa9c93aaa398.1920x1080.jpg",
-        "/imgs/carrousel/AOE/ss_b42dec99b197fea9882abc333e2cfb0a77dd3ed2.1920x1080.jpg",
-        "/imgs/carrousel/AOE/ss_c13d14fd11f3deb2fa5f592cceb98db3d48ef10b.1920x1080.jpg",
-        "/imgs/carrousel/AOE/ss_f270aa4e146459dc8b75a69bfecf23d13b0e8df6.1920x1080.jpg"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Apex Legends",
-      "price": 300,
-      "imageSrc": "imgs/carrousel/Carruselimgs/apex-legends-header.jpg",
-      "additionalImages": [
-        "/imgs/carrousel/Apex-Legends/apex-legends-1.jpg",
-        "/imgs/carrousel/Apex-Legends/apex-legends-2.jpg",
-        "/imgs/carrousel/Apex-Legends/apex-legends-3.jpg",
-        "/imgs/carrousel/Apex-Legends/apex-legends-4.jpg"
-      ]
-    }
-  ],
-  "slider": [
-    {
-      "url": "/imgs/rdr2_background.jpg",
-      "backgroundPosition": "center",
-      "title": "RED DEAD REDEMPTION 2",
-      "subtitle": "Red Dead Redemption 2",
-      "description": "Con un mundo abierto expansivo y detallado, el juego ofrece una experiencia inmersiva donde puedes explorar vastos paisajes, y tomar decisiones morales que afectarán el desarrollo de la historia. ",
-      "imageAlt": "/imgs/rdr2_game.jpg",
-      "prevPrice": "$ 99.99",
-      "price": "$ 85.99",
-      "platforms": ["steam.svg", "play.svg", "xbox.svg"]
-    },
-    {
-      "url": "/imgs/batman_background.png",
-      "backgroundPosition": "center",
-      "title": "BATMAN: ARKHAM KNIGHT",
-      "subtitle": "Batman: Arkham Knight",
-      "description": "Con una narrativa envolvente, gráficos impresionantes y un excepcional sistema de combate, los jugadores exploran la ciudad caótica, resuelven intrincados acertijos y combaten amenazas icónicas.",
-      "imageAlt": "/imgs/batman.png",
-      "prevPrice": "$ 59.99",
-      "price": "$ 45.99",
-      "platforms": ["steam.svg", "play.svg", "xbox.svg"]
-    },
-    {
-      "url": "/imgs/palworld_background.png",
-      "title": "PALWORLD",
-      "subtitle": "Palworld",
-      "description": "Los jugadores controlan un avatar personalizable desde una perspectiva en tercera persona con el objetivo de explorar las islas Palpagos de mundo abierto y descubrir sus secretos.",
-      "imageAlt": "/imgs/palworld.jpg",
-      "prevPrice": "$ 39.99",
-      "price": "$ 19.99",
-      "platforms": ["steam.svg", "xbox.svg"]
-    },
-    {
-      "url": "/imgs/hf_background.jpg",
-      "title": "HALF-LIFE ALYX",
-      "subtitle": "Half-Life Alyx",
-      "description": "Profundiza en la historia del universo de Half-Life y proporciona más contexto sobre los eventos que preceden a Half-Life 2. El juego ha sido elogiado por su inmersidad.",
-      "imageAlt": "/imgs/hf.png",
-      "prevPrice": "$ 25.99",
-      "price": "$ 10.99",
-      "platforms": ["steam.svg"]
-    }
-  ]
+  "cartItems": []
 }

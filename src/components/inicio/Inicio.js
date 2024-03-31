@@ -1,10 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { ContextData } from "@/app/ContexProvider/ContextProvider";
+import React, { useContext, useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { useMediaQuery } from "@react-hook/media-query";
 
-
 function Inicio() {
+  const { addToCart } = useContext(ContextData);
+
   const slider = [
     {
       id: 22,
@@ -78,34 +80,34 @@ function Inicio() {
     setCurrentIndex(newIndex);
   };
 
-  /* useEffect(() =>{
-        const interval = setInterval(() =>{
-            nextSlide();
-        }, 6000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nextSlide();
+  //   }, 6000);
 
-        return () => clearInterval(interval);
-    }, [currentIndex]) */
+  //   return () => clearInterval(interval);
+  // }, [currentIndex]);
 
   return (
-    <div className=" mb-36 w-screen h-full">
+    <div className=" mb-36 h-full w-screen">
       <div
         style={{
           backgroundImage: `url(${
-            isLargeScreen ?
-            slider[currentIndex].urlLarge
-          : slider[currentIndex].url
+            isLargeScreen
+              ? slider[currentIndex].urlLarge
+              : slider[currentIndex].url
           })`,
           backgroundPosition:
             slider[currentIndex].backgroundPosition || "center",
-            transition: "background-image 0.5s ease",
+          transition: "background-image 0.5s ease",
         }}
         className="h-full w-full bg-cover"
       >
-        <div className="text-primary absolute left-4 top-[50%] z-40 -translate-x-0 translate-y-[50%] cursor-pointer rounded-full p-0.5 text-2xl">
+        <div className="absolute left-4 top-[50%] z-40 -translate-x-0 translate-y-[50%] cursor-pointer rounded-full p-0.5 text-2xl text-primary">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
         </div>
 
-        <div className="text-primary absolute right-4 top-[50%] z-40 -translate-x-0 translate-y-[50%] cursor-pointer rounded-full p-0.5 text-2xl">
+        <div className="absolute right-4 top-[50%] z-40 -translate-x-0 translate-y-[50%] cursor-pointer rounded-full p-0.5 text-2xl text-primary">
           <BsChevronCompactRight onClick={nextSlide} size={30} />
         </div>
 
@@ -114,55 +116,55 @@ function Inicio() {
                       top-[60%]
                       z-40 -translate-y-[80%] translate-x-[-50%] transform text-center text-white lg:top-96"
         >
-          
           <h2 className="mb-2 text-center text-xl font-bold lg:text-2xl">
             {slider[currentIndex].title}
           </h2>
-          <p className="mb-3 w-46 text-center text-sm lg:mx-auto lg:text-lg">
+          <p className="w-46 mb-3 text-center text-sm lg:mx-auto lg:text-lg">
             {slider[currentIndex].description}
           </p>
-          <div className="bg-zinc-800 pb-36 mb-[-70%] px-0 lg:mb-[-20%] lg:mx-[35%] lg:pt-2">
-          {slider[currentIndex].imageSrc && (
-            <div
-              className="-z-10 mx-auto h-56 w-48 shadow-xl lg:w-60 lg:pt-2"
-              style={{
-                backgroundImage: `url(${slider[currentIndex].imageSrc})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className=" inset-0 bottom-0 pb-8  text-center text-white">
-                <h3 className="pt-[230px] text-xs lg:text-base lg:font-bold lg:pt-56">
-                  {slider[currentIndex].name}
-                </h3>
-                <p className="pr-28 pt-2 text-sm line-through lg:pr-40 lg:text-xs">
-                  {slider[currentIndex].prevPrice}
-                </p>
-                <p className="pl-2 pr-28 text-lg font-bold text-green-500 lg:pr-36 lg:text-xl">
-                  {slider[currentIndex].price}
-                </p>
+          <div className="mb-[-70%] bg-zinc-800 px-0 pb-36 lg:mx-[35%] lg:mb-[-20%] lg:pt-2">
+            {slider[currentIndex].imageSrc && (
+              <div
+                className="-z-10 mx-auto h-56 w-48 shadow-xl lg:w-60 lg:pt-2"
+                style={{
+                  backgroundImage: `url(${slider[currentIndex].imageSrc})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className=" inset-0 bottom-0 pb-8  text-center text-white">
+                  <h3 className="pt-[230px] text-xs lg:pt-56 lg:text-base lg:font-bold">
+                    {slider[currentIndex].name}
+                  </h3>
+                  <p className="pr-28 pt-2 text-sm line-through lg:pr-40 lg:text-xs">
+                    {slider[currentIndex].prevPrice}
+                  </p>
+                  <p className="pl-2 pr-28 text-lg font-bold text-green-500 lg:pr-36 lg:text-xl">
+                    {slider[currentIndex].price}
+                  </p>
 
-                <div className="ml-24 mt-[-30px] flex justify-center lg:ml-36">
-                  {slider[currentIndex].platforms.map((platforms) => (
-                    <img
-                      key={platforms}
-                      src={`/${platforms}`}
-                      alt={platforms}
-                      className="mr-[-10px] h-8 w-8 opacity-90"
-                    />
-                  ))}
+                  <div className="ml-24 mt-[-30px] flex justify-center lg:ml-36">
+                    {slider[currentIndex].platforms.map((platforms) => (
+                      <img
+                        key={platforms}
+                        src={`/${platforms}`}
+                        alt={platforms}
+                        className="mr-[-10px] h-8 w-8 opacity-90"
+                      />
+                    ))}
+                  </div>
+
+                  <button
+                    className="mt-3 h-9 w-[90%] cursor-pointer
+                 bg-gray-700 font-medium text-white hover:bg-white hover:text-primary lg:w-56 "
+                  >
+                    Añadir al carrito
+                  </button>
                 </div>
-                
-                <button className="hover:text-primary mt-3 h-9 w-[90%]
-                 cursor-pointer bg-gray-700 font-medium text-white hover:bg-white lg:w-56 ">
-                  Añadir al carrito
-                </button>
               </div>
-              </div>
-       
-          )}
+            )}
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );
