@@ -104,14 +104,14 @@ export default function Form() {
             </fieldset>
           </div>
           <fieldset className={fieldsetContainer}>
-            <details className="lg:min-h-24">
+            <details className=" lg:min-h-24">
               <summary className="cursor-pointer">
                 Lea los términos y condiciones
               </summary>
               <h3>
                 <b>Términos y Condiciones</b>
               </h3>
-              <p className="max-w-lg">
+              <p className="mb-2 max-w-md">
                 La información provista como sexo,edad o su cumpleaños serán
                 utilizadas para seleccionas ofertas especiales para ti.
               </p>

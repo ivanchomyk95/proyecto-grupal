@@ -1,16 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import CartItems from "./cartComponents/CartItems/CartItems";
 import Products from "./cartComponents/Products/Products";
 import { ContextData } from "@/app/ContexProvider/ContextProvider";
 import { buttonStyle, shopContainerStyle } from "./stylesShoppingCart";
 
 export default function ShoppingCart({ setIsVisible, isVisible }) {
-  const { removeAll } = useContext(ContextData);
-
+  const { removeAll, totalPrice } = useContext(ContextData);
+  const [confirmBuy, setConfirmBuy] = useState(false);
   //shopping Modal Functions
   const handleClose = (e) => {
     if (e.target.id == "shopCart") {
       setIsVisible(!isVisible);
+    }
+  };
+  const handleConfirmBuy = () => {
+    if (totalPrice > 0) {
+      setConfirmBuy(!confirmBuy);
+    } else {
+      alert("EL carrito esta vacío");
     }
   };
 
@@ -26,9 +33,27 @@ export default function ShoppingCart({ setIsVisible, isVisible }) {
           {<Products />}
         </div>
         <CartItems />
-        <button onClick={() => {}} className={buttonStyle}>
-          Comprar
-        </button>
+        {!confirmBuy ? (
+          <button onClick={() => handleConfirmBuy()} className={buttonStyle}>
+            Comprar
+          </button>
+        ) : (
+          <div className="flex flex-col rounded-lg bg-green-300 bg-opacity-40 p-3 text-center">
+            <p>
+              Confirmar compra por <b>${totalPrice}</b>
+            </p>
+            <button
+              className={buttonStyle}
+              onClick={() => {
+                setConfirmBuy(!confirmBuy);
+                removeAll();
+              }}
+            >
+              Confirmar
+            </button>
+          </div>
+        )}
+
         <div className="mt-4 flex w-full justify-between">
           <button onClick={() => removeAll()} className={buttonStyle}>
             Borrar Todo

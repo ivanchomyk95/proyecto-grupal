@@ -89,82 +89,79 @@ function Inicio() {
   // }, [currentIndex]);
 
   return (
-    <div className=" mb-5 flex h-screen w-full justify-between ">
+    <div
+      style={{
+        backgroundImage: `url(${
+          isLargeScreen
+            ? slider[currentIndex].urlLarge
+            : slider[currentIndex].url
+        })`,
+        backgroundPosition: slider[currentIndex].backgroundPosition || "center",
+        transition: "background-image 0.5s ease",
+      }}
+      className="mb-5 flex h-full w-full items-center justify-between bg-cover  "
+    >
+      <div className=" z-40 w-10 cursor-pointer rounded-full p-0.5 text-2xl text-primary">
+        <BsChevronCompactLeft onClick={prevSlide} size={30} />
+      </div>
       <div
-        style={{
-          backgroundImage: `url(${
-            isLargeScreen
-              ? slider[currentIndex].urlLarge
-              : slider[currentIndex].url
-          })`,
-          backgroundPosition:
-            slider[currentIndex].backgroundPosition || "center",
-          transition: "background-image 0.5s ease",
-        }}
-        className="flex h-full w-full items-center justify-between bg-cover  "
+        id="card-container"
+        className=" z-40  flex h-full w-3/5 transform flex-col items-center gap-y-2 pt-24 text-center text-white sm:gap-y-12 "
       >
-        <div className=" z-40 w-10 cursor-pointer rounded-full p-0.5 text-2xl text-primary">
-          <BsChevronCompactLeft onClick={prevSlide} size={30} />
-        </div>
-        <div
-          id="card-container"
-          className=" z-40  flex h-full w-3/5 transform flex-col items-center gap-y-16 pt-32 text-center text-white "
-        >
-          <h2 className="mb-2 text-center text-xl font-bold lg:text-2xl">
-            {slider[currentIndex].title}
-          </h2>
-          <p className="w-46 mb-3 text-center text-sm lg:mx-auto lg:text-lg">
-            {slider[currentIndex].description}
-          </p>
-          <div className="mb-[-70%]  w-52 bg-zinc-800 px-0 pb-36 lg:mx-[35%] lg:mb-[-20%] lg:w-64 lg:pt-2">
-            {slider[currentIndex].imageSrc && (
-              <div
-                className="-z-10 mx-auto h-56 w-48 shadow-xl lg:w-60 lg:pt-2"
-                style={{
-                  backgroundImage: `url(${slider[currentIndex].imageSrc})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className=" inset-0 bottom-0 pb-8  text-center text-white">
-                  <h3 className="pt-[230px] text-xs lg:pt-56 lg:text-base lg:font-bold">
-                    {slider[currentIndex].name}
-                  </h3>
-                  <p className="pr-28 pt-2 text-sm line-through lg:pr-40 lg:text-xs">
-                    {slider[currentIndex].prevPrice}
-                  </p>
-                  <p className="pl-2 pr-28 text-lg font-bold text-green-500 lg:pr-36 lg:text-xl">
-                    {slider[currentIndex].price}
-                  </p>
+        <h2 className="mb-2 text-center text-xl font-bold lg:text-2xl">
+          {slider[currentIndex].title}
+        </h2>
+        <p className="w-46 mb-3 text-center text-sm lg:mx-auto lg:text-lg">
+          {slider[currentIndex].description}
+        </p>
+        <div className="mb-[-70%]  w-52 bg-zinc-800 px-0 pb-36 lg:mx-[35%] lg:mb-[-20%] lg:w-64 lg:pt-2">
+          {slider[currentIndex].imageSrc && (
+            <div
+              className="-z-10 mx-auto h-56 w-48 shadow-xl lg:w-60 lg:pt-2"
+              style={{
+                backgroundImage: `url(${slider[currentIndex].imageSrc})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className=" inset-0 bottom-0 pb-8  text-center text-white">
+                <h3 className="pt-[230px] text-xs lg:pt-56 lg:text-base lg:font-bold">
+                  {slider[currentIndex].name}
+                </h3>
+                <p className="pr-28 pt-2 text-sm line-through lg:pr-40 lg:text-xs">
+                  {slider[currentIndex].prevPrice}
+                </p>
+                <p className="pl-2 pr-28 text-lg font-bold text-green-500 lg:pr-36 lg:text-xl">
+                  {slider[currentIndex].price}
+                </p>
 
-                  <div className="ml-24 mt-[-30px] flex justify-center lg:ml-36">
-                    {slider[currentIndex].platforms.map((platforms) => (
-                      <img
-                        key={platforms}
-                        src={`/${platforms}`}
-                        alt={platforms}
-                        className="mr-[-10px] h-8 w-8 opacity-90"
-                      />
-                    ))}
-                  </div>
-
-                  <button
-                    className="mt-3 h-9 w-[90%] cursor-pointer
-                 bg-gray-700 font-medium text-white hover:bg-white hover:text-primary lg:w-56 "
-                    onClick={() => {
-                      addToCart(slider[currentIndex]);
-                    }}
-                  >
-                    Añadir al carrito
-                  </button>
+                <div className="ml-24 mt-[-30px] flex justify-center lg:ml-36">
+                  {slider[currentIndex].platforms.map((platforms) => (
+                    <img
+                      key={platforms}
+                      src={`/${platforms}`}
+                      alt={platforms}
+                      className="mr-[-10px] h-8 w-8 opacity-90"
+                    />
+                  ))}
                 </div>
+
+                <button
+                  className="mt-3 h-9 w-[90%] cursor-pointer
+                 bg-gray-700 font-medium text-white hover:bg-white hover:text-primary lg:w-56 "
+                  onClick={() => {
+                    addToCart(slider[currentIndex]);
+                  }}
+                >
+                  Añadir al carrito
+                </button>
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
-        <div className=" z-40 w-10 cursor-pointer rounded-full p-0.5 text-2xl text-primary">
-          <BsChevronCompactRight onClick={nextSlide} size={30} />
-        </div>
+      </div>
+      <div className=" z-40 w-10 cursor-pointer rounded-full p-0.5 text-2xl text-primary">
+        <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
     </div>
   );
