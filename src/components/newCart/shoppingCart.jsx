@@ -19,7 +19,7 @@ export default function ShoppingCart({ setIsVisible, isVisible }) {
       id="shopCart"
       onClick={handleClose}
     >
-      <div className="  mx-auto my-5 flex h-5/6 w-4/5 flex-col items-center overflow-y-scroll rounded-md bg-[--color-light] px-5 py-5 pb-16  opacity-95 lg:absolute lg:right-2 lg:w-1/3  ">
+      <div className="  mx-auto my-5 flex h-5/6 w-4/5 flex-col items-center overflow-y-scroll rounded-md bg-white px-5 py-5 pb-16  opacity-100 lg:absolute lg:right-2 lg:w-1/3  ">
         <h2 className="mb-3 text-center font-bold leading-10">TUS COMPRAS</h2>
         <div className="my-2 mb-5 flex w-full justify-center rounded-3xl bg-green-300 bg-opacity-20 pt-2">
           {<Products />}
