@@ -28,7 +28,7 @@ function Navbar() {
 
   return (
     <div>
-      <div className="absolute left-80 top-6 z-60 m-0 cursor-pointer p-0 text-white lg:hidden">
+      <div className="absolute right-12 top-6 z-60 m-0 cursor-pointer p-0 text-white lg:hidden">
         <IoMenu size={25} onClick={() => setMenu(true)} />
       </div>
       <div

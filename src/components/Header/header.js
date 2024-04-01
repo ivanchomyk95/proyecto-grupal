@@ -29,7 +29,7 @@ const Header = ({ isVisible, setIsVisible }) => {
     <div className="w-full">
       <div
         className={clsx(
-          "fixed  top-0 z-50  flex  w-full items-center  justify-between px-2  pb-16 transition-all duration-300 ",
+          "fixed  top-0 z-50     flex w-full items-center justify-between px-2  transition-all duration-300 ",
           scrollingUp && prevScrollPos !== 0
             ? "bg-white text-black shadow-md"
             : "bg-transparent text-white",

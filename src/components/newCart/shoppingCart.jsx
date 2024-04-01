@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import CartItems from "./cartComponents/CartItems/CartItems";
 import Products from "./cartComponents/Products/Products";
 import { ContextData } from "@/app/ContexProvider/ContextProvider";
+import { buttonStyle, shopContainerStyle } from "./stylesShoppingCart";
 
 export default function ShoppingCart({ setIsVisible, isVisible }) {
   const { removeAll } = useContext(ContextData);
@@ -19,33 +20,24 @@ export default function ShoppingCart({ setIsVisible, isVisible }) {
       id="shopCart"
       onClick={handleClose}
     >
-      <div className="  mx-auto my-5 flex h-5/6 w-4/5 flex-col items-center overflow-y-scroll rounded-md bg-white px-5 py-5 pb-16  opacity-100 lg:absolute lg:right-2 lg:w-1/3  ">
+      <div id="shop-container" className={shopContainerStyle}>
         <h2 className="mb-3 text-center font-bold leading-10">TUS COMPRAS</h2>
         <div className="my-2 mb-5 flex w-full justify-center rounded-3xl bg-green-300 bg-opacity-20 pt-2">
           {<Products />}
         </div>
         <CartItems />
-        <button
-          onClick={() => {}}
-          className="font[--font-family-subtitle] my-2 w-60 rounded-md bg-[--color-primary] px-6 py-1
-text-lg  text-[--color-light] duration-300 hover:scale-105 hover:bg-[--color-dark]"
-        >
+        <button onClick={() => {}} className={buttonStyle}>
           Comprar
         </button>
         <div className="mt-4 flex w-full justify-between">
-          <button
-            onClick={() => removeAll()}
-            className="  font[--font-family-subtitle] rounded-md bg-[--color-primary] px-6 py-1 text-lg
-text-[--color-light]  duration-300 hover:scale-105 hover:bg-[--color-dark]"
-          >
+          <button onClick={() => removeAll()} className={buttonStyle}>
             Borrar Todo
           </button>
           <button
             onClick={() => {
               setIsVisible(!isVisible);
             }}
-            className="  font[--font-family-subtitle] rounded-md bg-[--color-primary] px-6 py-1 text-lg
-text-[--color-light]  duration-300 hover:scale-105 hover:bg-[--color-dark]"
+            className={buttonStyle}
           >
             Volver
           </button>

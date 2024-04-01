@@ -1,4 +1,5 @@
 import React from "react";
+import { buttonStyle } from "../../stylesShoppingCart";
 
 export default function Product({ product, addToCart }) {
   return (
@@ -8,11 +9,7 @@ export default function Product({ product, addToCart }) {
         <h3 className="mx-4">{product.name}</h3>
         <h3>${product.price}</h3>
       </div>
-      <button
-        className="  font[--font-family-subtitle] mx-auto  rounded-md bg-[--color-primary] px-6 py-1
-text-lg  text-[--color-light] duration-300 hover:scale-105 hover:bg-[--color-dark]"
-        onClick={() => addToCart(product)}
-      >
+      <button className={buttonStyle} onClick={() => addToCart(product)}>
         AÑADIR
       </button>
     </div>

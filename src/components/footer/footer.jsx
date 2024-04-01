@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className=" min-w-full bg-slate-100">
       <Providers />
-      <div id="formAndAside" className="lg:flex  lg:justify-around">
+      <div id="formAndAside" className="xl:flex  xl:justify-around">
         <Form />
         <div id="aside" className="flex flex-col items-center justify-center">
           <Contact />

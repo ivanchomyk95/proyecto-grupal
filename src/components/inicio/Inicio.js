@@ -89,7 +89,7 @@ function Inicio() {
   // }, [currentIndex]);
 
   return (
-    <div className=" mb-36 flex h-screen w-full justify-between">
+    <div className=" mb-5 flex h-screen w-full justify-between ">
       <div
         style={{
           backgroundImage: `url(${
@@ -108,7 +108,7 @@ function Inicio() {
         </div>
         <div
           id="card-container"
-          className=" z-40  flex h-full w-3/5 transform flex-col items-center pt-20 text-center text-white "
+          className=" z-40  flex h-full w-3/5 transform flex-col items-center gap-y-16 pt-32 text-center text-white "
         >
           <h2 className="mb-2 text-center text-xl font-bold lg:text-2xl">
             {slider[currentIndex].title}
