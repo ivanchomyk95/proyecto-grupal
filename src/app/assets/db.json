@@ -1,138 +1,127 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Back 4 Blood",
       "price": 400,
       "imageSrc": "imgs/CarouselBlog/backblood.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Baldur's Gate 3",
       "price": 300,
       "imageSrc": "imgs/CarouselBlog/baldursgate.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Brotato",
       "price": 1250,
       "imageSrc": "imgs/CarouselBlog/brotato.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Call of Duty®: Modern Warfare® III",
       "price": 170,
       "imageSrc": "imgs/CarouselBlog/cod.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Counter-Strike 2",
       "price": 680,
       "imageSrc": "imgs/CarouselBlog/counter.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "DEVOUR",
       "price": 2930,
       "imageSrc": "imgs/CarouselBlog/devour.jpg"
     },
-
     {
-      "id": 7,
+      "id": "7",
       "name": "Dragon's Dogma 2",
       "price": 260,
       "imageSrc": "imgs/CarouselBlog/dragonsdogma.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "FINAL FANTASY VII REMAKE INTERGRADE",
       "price": 480,
       "imageSrc": "imgs/CarouselBlog/ff.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Call to Arms - Gates of Hell: Ostfront",
       "price": 570,
       "imageSrc": "imgs/CarouselBlog/gatesofhell.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "HELLDIVERS™ 2",
       "price": 3590,
       "imageSrc": "imgs/CarouselBlog/helldivers.jpg"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "HUMANKIND™",
       "price": 960,
       "imageSrc": "imgs/CarouselBlog/humankind.jpg"
     },
-
     {
-      "id": 12,
+      "id": "12",
       "name": "Inscryption",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/inscryption.jpg"
     },
-
     {
-      "id": 13,
+      "id": "13",
       "name": "Love Is All Around",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/liaa.jpg"
     },
-
     {
-      "id": 14,
+      "id": "14",
       "name": "Palworld",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/palworld.jpg"
     },
-
     {
-      "id": 15,
+      "id": "15",
       "name": "PAYDAY 2",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/payday.jpg"
     },
-
     {
-      "id": 16,
+      "id": "16",
       "name": "Sengoku Dynasty",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/sengoku.jpg"
     },
-
     {
-      "id": 17,
+      "id": "17",
       "name": "Sons Of The Forest",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/sons.jpg"
     },
-
     {
-      "id": 18,
+      "id": "18",
       "name": "Stronghold: Definitive Edition",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/stronghold.jpg"
     },
-
     {
-      "id": 19,
+      "id": "19",
       "name": "Stumble Guys",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/stumble.jpg"
     },
-
     {
-      "id": 20,
+      "id": "20",
       "name": "The Talos Principle 2",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/thetalos.jpg"
     },
-
     {
-      "id": 12,
+      "id": "12",
       "name": "Tony Hawk's™ Pro Skater™ 1 + 2",
       "price": 2400,
       "imageSrc": "imgs/CarouselBlog/tonyhawks.jpg"
@@ -163,49 +152,49 @@
     },
     {
       "imageSrc": "../imgs/batman-arkham.jpg",
-      "id": 37,
+      "id": "37",
       "name": "Batman Arkam: Knight",
       "price": "19.99"
     },
     {
       "imageSrc": "../imgs/the-witcher.jpg",
-      "id": 36,
+      "id": "36",
       "name": "The Witcher 3",
       "price": "29.99"
     },
     {
       "imageSrc": "../imgs/r-evil.jpg",
-      "id": 35,
+      "id": "35",
       "name": "Resident Evil Village",
       "price": "29.99"
     },
     {
       "imageSrc": "../imgs/serious-sam.jpg",
-      "id": 34,
+      "id": "34",
       "name": "Serious Sam 4",
       "price": "18.99"
     },
     {
       "imageSrc": "../imgs/Skyrim.jpg",
-      "id": 33,
+      "id": "33",
       "name": "Skyrim V",
       "price": "23.99"
     },
     {
       "imageSrc": "../imgs/diablo-4.jpg",
-      "id": 32,
+      "id": "32",
       "name": "Diablo 4",
       "price": "69.99"
     },
     {
       "imageSrc": "../imgs/re-7.jpg",
-      "id": 31,
+      "id": "31",
       "name": "Resident Evil Biohazard",
       "price": "10.47"
     },
     {
       "imageSrc": "../imgs/vampyr.jpg",
-      "id": 30,
+      "id": "30",
       "name": "The Vampyr",
       "price": "18.99"
     }

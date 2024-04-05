@@ -10,27 +10,23 @@ export const ContextData = createContext();
 export default function ContextDataPRovider({ children }) {
   const [state, dispatch] = useReducer(shopReducer, shopInitialState);
 
+  const ENDPOINTS = {
+    products: "http://localhost:5000/products",
+    cartItems: "http://localhost:5000/cartItems",
+  };
+
   const updateState = async () => {
-    const ENDPOINTS = {
-      products: "http://localhost:5000/products",
-      cartItems: "http://localhost:5000/cartItems",
+    const responses = {
+      products: await axios.get(ENDPOINTS.products),
+      cartItems: await axios.get(ENDPOINTS.cartItems),
     };
-    try {
-      const responses = {
-        products: await axios.get(ENDPOINTS.products),
-        cartItems: await axios.get(ENDPOINTS.cartItems),
-      };
 
-      const data = {
-        products: await responses.products.data,
-        cartItems: await responses.cartItems.data,
-      };
+    const data = {
+      products: await responses.products.data,
+      cartItems: await responses.cartItems.data,
+    };
 
-      dispatch({ type: TYPES.READ_STATE, payload: data });
-    } catch (e) {
-      alert("Error al conectar al servidor, intente mas tarde. " + e.message);
-      console.log(e);
-    }
+    dispatch({ type: TYPES.READ_STATE, payload: data });
   };
   useEffect(() => {
     updateState();
@@ -43,14 +39,36 @@ export default function ContextDataPRovider({ children }) {
     .toFixed(2);
 
   //Dispatch Actions
-  const addToCart = (itemInfo) => {
-    dispatch({ type: TYPES.ADD_TO_CART, payload: itemInfo });
-  };
+  const addToCart = async (itemInfo) => {
+    let newItem = state.products.find((product) => product.id == itemInfo.id);
 
-  const removeItem = (itemInfo) => {
-    dispatch({ type: TYPES.REMOVE, payload: itemInfo });
+    const OPTIONS = {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      data: JSON.stringify(newItem),
+    };
+    console.log(newItem);
+
+    if (newItem != undefined) {
+      let itemInCart = state.cartItems.some((item) => item.id == newItem.id);
+      if (!itemInCart) {
+        await axios(ENDPOINTS.cartItems, OPTIONS);
+      }
+      dispatch({ type: TYPES.ADD_TO_CART });
+    }
   };
-  const removeAll = () => {
+  const removeItem = async (itemID) => {
+    const ENDPOINT = `http://localhost:5000/cartItems/${itemID}`;
+    await axios.delete(ENDPOINT);
+
+    dispatch({ type: TYPES.REMOVE, payload: itemID });
+  };
+  const removeAll = async () => {
+    state.cartItems.forEach((element) => {
+      const ENDPOINT = `http://localhost:5000/cartItems/${element.id}`;
+      axios.delete(ENDPOINT);
+    });
+
     dispatch({ type: TYPES.REMOVE_ALL });
   };
 
